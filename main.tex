@@ -1,0 +1,237 @@
+%% 
+%% Copyright 2007-2020 Elsevier Ltd
+%% 
+%% This file is part of the 'Elsarticle Bundle'.
+%% ---------------------------------------------
+%% 
+%% It may be distributed under the conditions of the LaTeX Project Public
+%% License, either version 1.2 of this license or (at your option) any
+%% later version.  The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.2 or later is part of all distributions of LaTeX
+%% version 1999/12/01 or later.
+%% 
+%% The list of all files belonging to the 'Elsarticle Bundle' is
+%% given in the file `manifest.txt'.
+%% 
+%% Template article for Elsevier's document class `elsarticle'
+%% with harvard style bibliographic references
+
+\documentclass[preprint,12pt,authoryear]{elsarticle}
+
+%% Use the option review to obtain double line spacing
+%%\documentclass[authoryear,preprint,review,12pt]{elsarticle}
+
+%% Use the options 1p,twocolumn; 3p; 3p,twocolumn; 5p; or 5p,twocolumn
+%% for a journal layout:
+%% \documentclass[final,1p,times,authoryear]{elsarticle}
+%%\documentclass[final,1p,times,twocolumn,authoryear]{elsarticle}
+%% \documentclass[final,3p,times,authoryear]{elsarticle}
+%% \documentclass[final,3p,times,twocolumn,authoryear]{elsarticle}
+%% \documentclass[final,5p,times,authoryear]{elsarticle}
+%%\documentclass[final,5p,times,twocolumn,authoryear]{elsarticle}
+
+%% For including figures, graphicx.sty has been loaded in
+%% elsarticle.cls. If you prefer to use the old commands
+%% please give \usepackage{epsfig}
+
+%% The amssymb package provides various useful mathematical symbols
+\usepackage{amssymb}
+%% The amsthm package provides extended theorem environments
+%% \usepackage{amsthm}
+
+%% The lineno packages adds line numbers. Start line numbering with
+%% \begin{linenumbers}, end it with \end{linenumbers}. Or switch it on
+%% for the whole article with \linenumbers.
+%% \usepackage{lineno}
+\usepackage{amsmath}
+\input{extra_packages.tex}
+\journal{Ocean Engineering}
+
+\begin{document}
+
+\begin{frontmatter}
+
+    %% Title, authors and addresses
+
+    %% use the tnoteref command within \title for footnotes;
+    %% use the tnotetext command for theassociated footnote;
+    %% use the fnref command within \author or \affiliation for footnotes;
+    %% use the fntext command for theassociated footnote;
+    %% use the corref command within \author for corresponding author footnotes;
+    %% use the cortext command for theassociated footnote;
+    %% use the ead command for the email address,
+    %% and the form \ead[url] for the home page:
+    %% \title{Title\tnoteref{label1}}
+    %% \tnotetext[label1]{}
+    %% \author{Name\corref{cor1}\fnref{label2}}
+    %% \ead{email address}
+    %% \ead[url]{home page}
+    %% \fntext[label2]{}
+    %% \cortext[cor1]{}
+    %% \affiliation{organization={},
+    %%            addressline={}, 
+    %%            city={},
+    %%            postcode={}, 
+    %%            state={},
+    %%            country={}}
+    %% \fntext[label3]{}
+
+    \title{System identification of a physics-informed ship model for better predictions in wind conditions}
+
+    %% use optional labels to link authors explicitly to addresses:
+    %% \author[label1,label2]{}
+    %% \affiliation[label1]{organization={},
+    %%             addressline={},
+    %%             city={},
+    %%             postcode={},
+    %%             state={},
+    %%             country={}}
+    %%
+    %% \affiliation[label2]{organization={},
+    %%             addressline={},
+    %%             city={},
+    %%             postcode={},
+    %%             state={},
+    %%             country={}}
+
+    \author[1,2]{Martin Alexandersson\corref{cor1}%
+        %\fnref{fn1,fn3}
+    }
+    \ead{maralex@chalmers.se}
+    \author[1]{Wengang Mao}
+    \author[1]{Jonas W. Ringsberg}
+    \author[2]{Martin Kjellberg}
+
+
+    \affiliation[1]{organization={Dept. of Mechanics and Maritime Sciences, Division of Marine Technology, Chalmers University of Technology},%Department and Organization
+        addressline={Hörsalsvägen 7A},
+        city={Gothenburg},
+        postcode={41296},
+        country={Sweden}}
+
+
+    \affiliation[2]{organization={Research Institutes of Sweden (RISE), SSPA Maritime Center},%Department and Organization
+        addressline={Chalmers tvärgata 10},
+        city={Gothenburg},
+        postcode={41296},
+        country={Sweden}}
+
+    \cortext[cor1]{Corresponding author}
+
+    \begin{abstract}
+        \input{abstract.tex}
+
+    \end{abstract}
+
+    %%Graphical abstract
+    %\begin{graphicalabstract}
+    %    %\includegraphics{grabs}
+    %\end{graphicalabstract}
+    %
+    %%%Research highlights
+    %\begin{highlights}
+    %    \item Research highlight 1
+    %    \item Research highlight 2
+    %\end{highlights}
+
+    \begin{keyword}
+    Inverse dynamics \sep KVLCC2 \sep Multicollinearity \sep Physics-informed maneuvering model \sep System identification \sep Wind-assisted propulsion 
+        %% keywords here, in the form: keyword \sep keyword
+
+        %% PACS codes here, in the form: \PACS code \sep code
+
+        %% MSC codes here, in the form: \MSC code \sep code
+        %% or \MSC[2008] code \sep code (2000 is the default)
+
+    \end{keyword}
+
+\end{frontmatter}
+%% \linenumbers
+%textwidth in inches: \printinunitsof{in}\prntlen{\textwidth} \newline
+%textheight in inches: \printinunitsof{in}\prntlen{\textheight}
+%% main text
+%\newpage
+\section*{Nomenclature}
+\label{sec:introduction}
+\begin{table}[h]
+    \centering
+    %\footnotesize
+    \scriptsize
+    %\caption{Semi-empirical rudder parameters (SI units) in model scale.}
+    \label{tab:other_parameters}
+    \pgfplotstabletypeset[col sep=comma, column type=r,
+    columns/LaTeX/.style={column type=r,string type,column name=~},
+    columns/LaTeX1/.style={column type=r,string type, column name=~},
+    columns/LaTeX2/.style={column type=r,string type, column name=~},
+    %columns/LaTeX3/.style={column type=l,string type, column name=~},
+    columns/Description/.style={column type=p{3.3cm},string type,column name=~},
+    columns/Description1/.style={column type=p{3.3cm},string type, column name=~},
+    columns/Description2/.style={column type=p{3.3cm},string type, column name=~},
+    %columns/Description3/.style={column type=l,string type, column name=~},
+    %every head row/.style={before row=\hline,after row=\hline},
+    %every last row/.style={after row=\hline}
+    ]{tables/mathematical_model_kinetics.nomenclature.csv}
+\end{table}
+\FloatBarrier
+
+\section*{Abbreviations}
+\label{sec:introduction}
+\begin{table}[h]
+    \centering
+    %\footnotesize
+    \scriptsize
+    %\caption{Semi-empirical rudder parameters (SI units) in model scale.}
+    \label{tab:abbreviations}
+    \begin{tabular}{l l}
+
+    CFD & Computational fluid dynamics \\
+    CMT & Captive model tests \\
+    ID & Inverse dynamics \\
+    MMG & Manoeuvring modeling group \\
+    OLS & Ordinary least-square \\
+    PI model & Physics informed  model \\
+    PU model & Physics uninformed  model \\
+    RHI & Rudder hull interaction \\
+    VCT & Virtual captive tests \\
+    WASP & Wind-assisted ship propulsion \\
+    wPCC & Wind powered car carrier \\
+    SNR & Signal to noise ratio \\
+    \end{tabular}
+        
+\end{table}
+\FloatBarrier
+
+\section{Introduction}
+\label{sec:introduction}
+
+\section{Discussion}
+\label{sec:discussion}
+
+
+\section{Conclusions}
+\label{sec:conclusions}
+\input{conclusions}
+\FloatBarrier
+
+\section{Acknowledgements}
+\input{acknowledgements}
+
+%% The Appendices part is started with the command \appendix;
+%% appendix sections are then done as normal sections
+\appendix
+
+
+\FloatBarrier
+%% If you have bibdatabase file and want bibtex to generate the
+%% bibitems, please use
+%%
+\pagebreak
+\bibliographystyle{elsarticle-harv}
+\bibliography{Paper_3_semiempirical_rudder.bib}
+
+\end{document}
+
+\endinput
+%%
+%% End of file `elsarticle-template-harv.tex'.
