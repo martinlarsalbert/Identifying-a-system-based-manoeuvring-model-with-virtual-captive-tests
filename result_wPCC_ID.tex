@@ -1,8 +1,17 @@
-\begin{figure}[h]
-    \begin{center}
-        \includesvg{figures/results_wPCC_ID.zigzag 10_10.svg}
-        \caption{Decomposition of hull forces and moments during a zigzag20/20 test for parameters related to drift, yaw rate the prediction models.}
+\begin{figure}
+     \centering
+     \begin{subfigure}[b]{\textwidth}
+         \centering
+         \includesvg{figures/results_wPCC_ID.zigzag 10_10.svg}
+        \caption{Zigzag10/10 to port.}
+        \label{fig:ID_wPCC_10}
+     \end{subfigure}
+     \vfill
+     \begin{subfigure}[b]{\textwidth}
+         \includesvg{figures/results_wPCC_ID.zigzag 20_20.svg}
+        \caption{Zigzag20/20 to starboard.}
+        \label{fig:ID_wPCC_20}
+     \end{subfigure}
+        \caption{Comparison between forces during zigzag tests estimated with inverse dynamics from the experiments and predictions with a model equipped with either a polynomial rudder or semi-empirical rudder model. Forces from VCT calculations of some interesting states have also been added.}
         \label{fig:ID_wPCC}
-    \end{center}
 \end{figure}
-
