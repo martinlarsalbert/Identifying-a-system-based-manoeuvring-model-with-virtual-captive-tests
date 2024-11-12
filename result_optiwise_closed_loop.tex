@@ -1,18 +1,32 @@
-As a complement to the inverse dynamics analysis, closed loop simulations were also conducted for the Optiwise. The simulation results can be seen in \autoref{fig:sim_optiwise}. The is a very good agreement between the experimental results and the simulation with the polynomial rudder equipped model. 
 \begin{figure}[h]
      \centering
-     \begin{subfigure}[b]{\textwidth}
+     \begin{subfigure}[b]{0.40\textwidth}
          \centering
-         \includesvg{figures/results_optiwise_rudder_as_input.zigzag 10_10 port.svg}
+         \includesvg{figures/results_optiwise_ID.closed loop zigzag 10_10 port.svg}
         \caption{Simulations Optiwise Zigzag10/10 to port.}
-        \label{fig:sim_wPCC_10}
+        \label{fig:sim_optiwise_10_port}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.40\textwidth}
+         \includesvg{figures/results_optiwise_ID.closed loop zigzag 10_10 stbd.svg}
+        \caption{Simulations Optiwise Zigzag10/10 to starboard.}
+        \label{fig:sim_optiwise_10_stbd}
      \end{subfigure}
      \vfill
-     \begin{subfigure}[b]{\textwidth}
-         \includesvg{figures/results_optiwise_rudder_as_input.zigzag 20_20 stbd.svg}
-        \caption{Simulations Optiwise Zigzag20/20 to starboard.}
-        \label{fig:sim_wPCC_20}
+     \begin{subfigure}[b]{0.40\textwidth}
+         \centering
+         \includesvg{figures/results_optiwise_ID.closed loop zigzag 20_20 port.svg}
+        \caption{Simulations Optiwise Zigzag20/20 to port.}
+        \label{fig:sim_optiwise_20_port}
      \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.40\textwidth}
+         \includesvg{figures/results_optiwise_ID.closed loop zigzag 20_20 stbd.svg}
+        \caption{Simulations Optiwise Zigzag20/20 to starboard.}
+        \label{fig:sim_optiwise_20_stbd}
+     \end{subfigure}
+
+     
         \caption{Comparison between zigzag tests with Optiwise from experiments and simulations with a model equipped with either a polynomial rudder or semi-empirical rudder model.}
         \label{fig:sim_optiwise}
 \end{figure}
