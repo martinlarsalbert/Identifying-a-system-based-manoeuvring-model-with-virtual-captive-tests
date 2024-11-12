@@ -1,4 +1,7 @@
-Forces predicted with the Optiwise model equipped with either the semi-empirical rudder or the polynomial rudder have been compared with forces from the experiment, estimated by inverse dynamics. Generally, the predicted forces agrees well with the experimental results for the zigzag10/10, as shown in \autoref{fig:ID_optiwise10}. 
+Models equipped with either the semi-empirical rudder or the polynomial rudder were developed for the Optiwise. Rudder forces were measured during the experiments for this vessel so that a third model was created. This model uses the actual measured rudder force instead of a prediction model -- so that only the hull forces are predicted. 
+
+\autoref{fig:ID_optiwise} shows comparisons for the zigzag10/10 and 20/20 where model force predictions are compared with corresponding values estimated from the experiments with inverse dynamics. VCT calculations were also conducted for some of the states of these maneuvers, shown by the green dots.
+There is generally a good agreement for the zigzag10/10, as shown in \autoref{fig:ID_optiwise10}. Deviations were however observed for the sway force $Y_D$ in the periods after rudder transition at about t=11 s, and t=37 s, as indicated in the figure. All of the models and the VCT calculations predict a more straight line in the $Y_D$ time series around these deviation points. 
 
 As a complement to the inverse dynamics analysis, closed loop simulations were also conducted for the Optiwise. The simulation results can be seen in \autoref{fig:sim_optiwise}. The is a very good agreement between the experimental results and the simulation with the polynomial rudder equipped model. 
 \begin{figure}[h]
@@ -17,4 +20,10 @@ As a complement to the inverse dynamics analysis, closed loop simulations were a
      \end{subfigure}
         \caption{Comparison between forces during zigzag tests with Optiwise estimated with inverse dynamics from the experiments and predictions with a model equipped with either a polynomial rudder or semi-empirical rudder model. Forces from VCT calculations of some interesting states have also been added.}
         \label{fig:ID_optiwise}
+\end{figure}
+
+\begin{figure}[h]
+    \includesvg{figures/results_optiwise_deviation_points.lowpass.svg}
+    \caption{Forces Optiwise Zigzag20/20 to starboard.}
+    \label{fig:ID_optiwise_20}
 \end{figure}
