@@ -1,19 +1,19 @@
-Forces predicted with the wPCC model equipped with either the semi-empirical rudder or the polynomial rudder have been compared with forces from the experiment, estimated by inverse dynamics. Both rudder models have reasonably good agreement with the experimental results from the zigzag10/10 test (see \autoref{fig:ID_wPCC_10}). For the 20/20 test, only the polynomial rudder model seems to capture the forces correctly (see \autoref{fig:ID_wPCC_20}). There are however some yawing moment $N_D$ deviations during the rudder transitions at t=9.5 s, and t=27 s.
+Forces predicted with the wPCC model equipped with either the semi-empirical rudder or the polynomial rudder have been compared with forces from the experiment, estimated by inverse dynamics. Both rudder models have reasonably good agreement with the experimental results from the zigzag10/10 test (see \autoref{fig:ID_wPCC_10}). For the 20/20 test, only the polynomial rudder model seems to capture the forces correctly (see \autoref{fig:ID_wPCC_20}). There are however some yawing moment $N_D$ deviations at t=9.5 s, and t=27 s. Extra VCT calculations have been conducted for some of the states during the maneuver. There is generally a good agreement between these calculated states and the experimental forces. There are however small deviations for the yawing moment.  
 
-\begin{figure}
+\begin{figure}[h]
      \centering
      \begin{subfigure}[b]{\textwidth}
          \centering
          \includesvg{figures/results_wPCC_ID.zigzag 10_10.svg}
-        \caption{Zigzag10/10 to port.}
+        \caption{Forces wPCC Zigzag10/10 to port.}
         \label{fig:ID_wPCC_10}
      \end{subfigure}
      \vfill
      \begin{subfigure}[b]{\textwidth}
          \includesvg{figures/results_wPCC_ID.zigzag 20_20.svg}
-        \caption{Zigzag20/20 to starboard.}
+        \caption{Forces wPCC Zigzag20/20 to starboard.}
         \label{fig:ID_wPCC_20}
      \end{subfigure}
-        \caption{Comparison between forces during zigzag tests estimated with inverse dynamics from the experiments and predictions with a model equipped with either a polynomial rudder or semi-empirical rudder model. Forces from VCT calculations of some interesting states have also been added.}
+        \caption{Comparison between forces during zigzag tests with wPCC estimated with inverse dynamics from the experiments and predictions with a model equipped with either a polynomial rudder or semi-empirical rudder model. Forces from VCT calculations of some interesting states have also been added.}
         \label{fig:ID_wPCC}
 \end{figure}

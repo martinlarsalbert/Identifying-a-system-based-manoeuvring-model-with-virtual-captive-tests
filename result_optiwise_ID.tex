@@ -1,7 +1,17 @@
-%\begin{figure}[h]
-%    \begin{center}
-%        \includesvg{figures/results.hull_force_decomposition_zigzag20.svg}
-%        \caption{Decomposition of hull forces and moments during a zigzag20/20 test for parameters related to drift, yaw rate the prediction models.}
-%        \label{fig:ID_regression_N_decomposition}
-%    \end{center}
-%\end{figure}
+\begin{figure}[h]
+     \centering
+     \begin{subfigure}[b]{\textwidth}
+         \centering
+         \includesvg{figures/results_optiwise_ID.zigzag 10_10 port.svg}
+        \caption{Forces Optiwise Zigzag10/10 to port.}
+        \label{fig:ID_optiwise10}
+     \end{subfigure}
+     \vfill
+     \begin{subfigure}[b]{\textwidth}
+         \includesvg{figures/results_optiwise_ID.zigzag 20_20 stbd.svg}
+        \caption{Forces Optiwise Zigzag20/20 to starboard.}
+        \label{fig:ID_optiwise_20}
+     \end{subfigure}
+        \caption{Comparison between forces during zigzag tests with Optiwise estimated with inverse dynamics from the experiments and predictions with a model equipped with either a polynomial rudder or semi-empirical rudder model. Forces from VCT calculations of some interesting states have also been added.}
+        \label{fig:ID_optiwise}
+\end{figure}
