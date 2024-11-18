@@ -1,34 +1,24 @@
+The rudder inflow angle $\gamma$ and velocity $V_R$ were investigated by conducting a set of separate VCT calculations where the rudder was removed, so that an undisturbed flow by the rudder could be observed. The longitudinal and transverse inflow velocities $u_R$ and $v_R$ were measured along the rudder stock from the root to the tip of the rudder. \autoref{fig:rudder_velocities_span} shows the inflow velocity $\gamma=atan(v_R/u_R)$ along the rudder stock during two circle tests.
+\begin{figure}[h]
+    \centering 
+    \includesvg{figures/results_optiwise_rudder_velocities.span_circle.svg}
+    \caption{Rudder inflow angle from the root to the tip of the rudder during two circle tests.}
+     \label{fig:rudder_velocities_span}
+\end{figure}
 \begin{figure}[h]
      \centering
      \begin{subfigure}[b]{\textwidth}
          \centering
          \includesvg{figures/results_optiwise_rudder_velocities.drift_angle.svg}
         \caption{Drift angle.}
-        \label{fig:ID_wPCC_10}
+        \label{fig:inflow_to_force_drift_angle}
      \end{subfigure}
      \vfill
      \begin{subfigure}[b]{\textwidth}
-         \includesvg{figures/results_optiwise_rudder_velocities.span_drift.svg}
-        \caption{Circles.}
-        \label{fig:ID_wPCC_20}
-     \end{subfigure}
-        \caption{Rudder forces from VCT and predicted from the CFD inflow velocities for the drift angle tests.}
-        \label{fig:ID_wPCC}
-\end{figure}
-\begin{figure}[h]
-     \centering
-     \begin{subfigure}[b]{\textwidth}
-         \centering
          \includesvg{figures/results_optiwise_rudder_velocities.circle.svg}
         \caption{Circles.}
-        \label{fig:ID_wPCC_10}
+        \label{fig:inflow_to_force_circle}
      \end{subfigure}
-     \vfill
-     \begin{subfigure}[b]{\textwidth}
-         \includesvg{figures/results_optiwise_rudder_velocities.span_circle.svg}
-        \caption{Circles.}
-        \label{fig:ID_wPCC_20}
-     \end{subfigure}
-        \caption{Rudder forces from VCT and predicted from the CFD inflow velocities for the circle tests.}
-        \label{fig:ID_wPCC}
+        \caption{Rudder forces from VCT and predictions from the measured inflow velocities.}
+        \label{fig:inflow_to_rudder_force}
 \end{figure}
