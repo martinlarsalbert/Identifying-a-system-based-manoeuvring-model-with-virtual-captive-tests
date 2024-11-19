@@ -2,12 +2,13 @@
     \centering
     \caption{VCT variations for wPCC.}
     \label{tab:inflow_to_rudder_force}
-    \pgfplotstabletypeset[col sep=comma, column type=r, style=string type,
-        columns/V/.style={column type=r,string type, column name=$V$ [m/s]},
-        columns/beta_deg/.style={column type=r,string type, column name=$\beta$ [deg]},
-        columns/r/.style={column type=r,string type, column name=$r$ [rad/s]},
-        columns/delta_deg/.style={column type=r,string type, column name=$\delta$ [deg]},
-        columns/rev/.style={column type=r,string type, column name=rev [1/s]},
+    \pgfplotstabletypeset[col sep=comma, column type=c, style=string type,
+        columns/Test type/.style={column type=c,string type},
+        columns/V/.style={column type=c,string type, column name=$V$ [m/s]},
+        columns/beta_deg/.style={column type=c,string type, column name=$\beta$ [deg]},
+        columns/r/.style={column type=c,string type, column name=$r$ [rad/s]},
+        columns/delta_deg/.style={column type=c,string type, column name=$\delta$ [deg]},
+        columns/rev/.style={column type=c,string type, column name=rev [1/s]},
         %columns/r/.style={column type=r,fixed,fixed zerofill,precision=2, column name=$r$ [rad/s]},
         %columns/V_R/.style={fixed,fixed zerofill,precision=2, column name=$V_R$ [m/s]},
         %columns/gamma_deg/.style={fixed,fixed zerofill,precision=1, column name=$\gamma$ [deg]},
