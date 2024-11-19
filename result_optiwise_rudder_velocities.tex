@@ -1,4 +1,5 @@
-The rudder inflow angle $\gamma$ and velocity $V_R$ were investigated by conducting a set of separate VCT calculations where the rudder was removed, so that an undisturbed flow by the rudder could be observed. The longitudinal and transverse inflow velocities $u_R$ and $v_R$ were measured along the rudder stock from the root to the tip of the rudder. \autoref{fig:inflow_angle_straight} shows the inflow velocity $\gamma=atan(v_R/u_R)$ along the rudder stock when ship is on a straight course. The inflow angle varies a lot along the rudder span. The average value along the rudder span is howver close to zero, showed by the dashed vertical line.
+The inverse dynamics analysis showed that the rudder force prediction was the main error source for both wPCC and Optiwise. A more in depth investigation of the rudder force generation was therefore conducted on the Optiwise VCT results.
+The rudder inflow angle $\gamma$ and velocity $V_R$ were measured by conducting a set of separate VCT calculations where the rudder was removed, so that an undisturbed flow by the rudder could be observed. The longitudinal and transverse inflow velocities $u_R$ and $v_R$ were measured along the rudder stock from the root to the tip of the rudder. \autoref{fig:inflow_angle_straight} shows the inflow velocity $\gamma=atan(v_R/u_R)$ along the rudder stock when the ship was on a straight course. The inflow angle varies a lot along the rudder span, where the clockwise rotating propeller induce a positive inflow angle above the propeller and a negative inflow angle below the propeller. The average value along the rudder span was however close to zero, showed by the dashed vertical line.
 \begin{figure}[h]
     \centering 
     \includesvg{figures/results_optiwise_rudder_velocities.inflow_angle_straight.svg}
@@ -8,7 +9,7 @@ The rudder inflow angle $\gamma$ and velocity $V_R$ were investigated by conduct
 Rudder forces have been calculated with the MMG rudder model, where the expressions to calculate $u_R$ and $v_R$ have been replaced by measured values, represented by the average values along the rudder span. 
 \autoref{fig:inflow_to_rudder_force} shows results from these calculations. The total velocity at the rudder $V_R$ does not vary that much during the drift angle and circle tests, as seen in \autoref{fig:inflow_to_force_drift_angle} and \autoref{fig:inflow_to_force_circle}. The inflow angle $\gamma$ varies between about -5 and 5 degrees during the drift angle and circle tests, so that 10 degrees drift angle corresponds to 5 degrees inflow angle, as a result of the flow straightening effect of the hull. 
 The side force is well predicted for -10 and 10 degrees drift angle. For the straight ahead condition, with zero drift angle, the force is under predicted compared to the VCT results. 
-The side force predicted by the MMG model agrees well with the VCT results for positive yaw rates, but not the negative yaw rates, as shown in \autoref{tab:inflow_to_rudder_force} and \autoref{fig:inflow_to_force_circle}. The average inflow angles and speeds are of about the same magnitude for the \textpm 0.07 rad/s yaw rates, yet the VCT rudder side force differs, with -3.9 N compared to 3.3 N. 
+The side force predicted by the MMG model agrees well with the VCT results for positive yaw rates, but not the negative yaw rates, as shown in \autoref{tab:inflow_to_rudder_force}.   
 \begin{table}[h]
     \centering
     \caption{Rudder forces from VCT and predictions from the measured inflow velocities.}
@@ -24,6 +25,7 @@ The side force predicted by the MMG model agrees well with the VCT results for p
         every last row/.style={after row=\hline}
     ]{tables/results_optiwise_rudder_velocities.inflows.csv}
 \end{table}
+The magnitude of the mean inflow angle is smaller when the ship turns to port -- when the drift angle or yaw rate are negative. This was not reflected in the VCT drift angle results, where \textpm 10 degrees had the same magnitude side force $Y_R^{VCT}$. The side force predicted from the MMG model $Y_R^{MMG}$ was however different, due to the different mean inflow angle. The difference between the VCT and MMG is even larger for the circle tests, where the mean inflow angle differs more between the sides.  
 \begin{figure}[h]
      \centering
      \begin{subfigure}[b]{\textwidth}
@@ -41,7 +43,8 @@ The side force predicted by the MMG model agrees well with the VCT results for p
         \caption{Rudder forces from VCT and predictions from the measured inflow velocities.}
         \label{fig:inflow_to_rudder_force}
 \end{figure}
-The span wise inflow angles for the \textpm 10 degrees drift angle and \textpm 0.07 rad/s yaw rates are shown in \autoref{fig:rudder_velocities_span}.
+
+The span wise inflow angles for the \textpm 10 degrees drift angle and \textpm 0.07 rad/s yaw rates are shown in \autoref{fig:rudder_velocities_span}. This figure illustrates the large velocity variations over the rudder span.
 \begin{figure}[h]
     \centering 
     \includesvg{figures/results_optiwise_rudder_velocities.inflow_angle.svg}

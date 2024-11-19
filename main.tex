@@ -190,16 +190,13 @@
 
     CFD & Computational fluid dynamics \\
     CMT & Captive model tests \\
+    FRMT & Free running model tests \\
     ID & Inverse dynamics \\
     MMG & Manoeuvring modeling group \\
     OLS & Ordinary least-square \\
-    PI model & Physics informed  model \\
-    PU model & Physics uninformed  model \\
     RHI & Rudder hull interaction \\
     VCT & Virtual captive tests \\
-    WASP & Wind-assisted ship propulsion \\
     wPCC & Wind powered car carrier \\
-    SNR & Signal to noise ratio \\
     \end{tabular}
         
 \end{table}
@@ -212,6 +209,10 @@
 \subsection{Model}
 \input{model}
 
+\subsection{VCT wPCC}
+\input{methodology_VCT_wPCC}
+
+
 \section{Results}
 \label{sec:results}
 %\input{result}
@@ -221,21 +222,21 @@
 \input{result_wPCC_VCT}
 \FloatBarrier
 
-\subsection{Inverse dynamics wPCC}
+\subsection{Inverse dynamics analysis wPCC}
 \input{result_wPCC_ID}
 \FloatBarrier
 \subsection{Closed loop simulations wPCC}
 \input{result_wPCC_closed_loop}
 \FloatBarrier
 
-\subsection{Inverse dynamics Optiwise}
+\subsection{Inverse dynamics analysis Optiwise}
 \input{result_optiwise_ID}
 \FloatBarrier
 \subsection{Closed loop simulations Optiwise}
 \input{result_optiwise_closed_loop}
 \FloatBarrier
 
-\subsection{Rudder velocities Optiwise}
+\subsection{Rudder inflow analysis Optiwise}
 \input{result_optiwise_rudder_velocities}
 \FloatBarrier
 
