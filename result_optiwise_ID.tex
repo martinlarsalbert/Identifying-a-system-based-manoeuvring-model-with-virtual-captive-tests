@@ -29,8 +29,42 @@ The force predictions for the zigzag20/20 is shown in \autoref{fig:ID_optiwise20
     \caption{Inverse dynamics sway force from repeated zigzag10/10 test to port. The accelerations have been estimated with the EKF and also with numeric differentiation of low-pass filtered signals.}
     \label{fig:lowpass_deviation_points}
 \end{figure}
-
-
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}[b]{\textwidth}
+        \centering
+        \includesvg{figures/results_optiwise_ID.rudder_forces_zigzag 10_10.svg}
+        \caption{Zigzag10/10 to port.}
+        \label{fig:ID_measured_rudder_zigzag_10_10}
+    \end{subfigure}
+     \vfill
+    \begin{subfigure}[b]{\textwidth}
+        \centering
+        \includesvg{figures/results_optiwise_ID.rudder_forces_zigzag 20_20.svg}
+        \caption{Zigzag20/20 to starboard.}
+        \label{fig:ID_measured_rudder_zigzag_20_20}
+    \end{subfigure}
+    \caption{Rudder forces during the zigzag tests compared to predictions with the MMG models.}
+    \label{fig:ID_optiwise20}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}[b]{\textwidth}
+        \centering
+        \includesvg{figures/results_optiwise_ID.zigzag 10_10.svg}
+        \caption{Zigzag10/10 to port.}
+        \label{fig:ID_measured_rudder_zigzag_10_10}
+    \end{subfigure}
+     \vfill
+    \begin{subfigure}[b]{\textwidth}
+        \centering
+        \includesvg{figures/results_optiwise_ID.zigzag 20_20.svg}
+        \caption{Zigzag20/20 to starboard.}
+        \label{fig:ID_measured_rudder_zigzag_20_20}
+    \end{subfigure}
+    \caption{Inverse dynamics forces during the zigzag tests compared to predictions with the MMG models.}
+    \label{fig:ID_optiwise20}
+\end{figure}
 
 %\begin{figure}[h]
 %     \centering
