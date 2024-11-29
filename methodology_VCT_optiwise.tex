@@ -1,3 +1,18 @@
+VCT calculations are conducted by solving a set of static flow calculations with CFD. The VCT test matrix is selected to have a good coverage of the states that the ship will have during the manoeuvre. How the combinations of drift angle and yaw rate have been selected can be seen in the figure below, for the wPCC. 
+The total forces from the VCT $X_{VCT}$, $Y_{VCT}$, and $N_{VCT}$ are recalculated in the following way, to obtain the damping forces.
+\begin{equation}
+    \label{eq:X_D}
+    X_{D} = X_{VCT} + Y_{\dot{r}} r^{2} + Y_{\dot{v}} r v
+\end{equation}
+\begin{equation}
+    \label{eq:Y_D}
+    Y_{D} = - X_{\dot{u}} r u + Y_{VCT}
+\end{equation}
+\begin{equation}
+    \label{eq:N_D}
+    N_{D} = N_{VCT} + X_{\dot{u}} u v - Y_{\dot{r}} r u - Y_{\dot{v}} u v
+\end{equation}
+The mass $m$ has disappeared from \autoref{eq:F_expanded} to arrive at these expressions, because the ship is not moving in ShipFlow, instead the water is.
 \begin{table}[h]
     \centering
     \small
