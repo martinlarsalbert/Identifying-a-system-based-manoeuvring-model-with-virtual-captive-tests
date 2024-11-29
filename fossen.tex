@@ -1,5 +1,96 @@
 The ship’s kinematics are expressed amidship in a ship fixed reference frame, rotated around the Earth fixed axis $x_0$ by the heading angle $\Psi$. Forces and motions are expressed in the surge $X$, sway $Y$ , and yaw $N$ degrees of freedom. The kinematics can be expressed as function of a velocity vector $\mathbf{\upsilon}$, since the forces do not depend on the position ($x_0,y_0$) or heading $\Psi$, during the manoeuvre.
 \begin{equation}
-    \label{eq:lambda__semiempirical}
+    \label{eq:upsilon}
     \input{equations/155.10_Fossen_model.upsilon}
 \end{equation}
+The equation of motion can thus be expressed as
+\begin{equation}
+    \label{eq:upsilon1d}
+    \input{equations/155.10_Fossen_model.upsilon1d}
+\end{equation}
+where $\mathbf{\dot{\upsilon}}$ is the acceleration vector, $\mathbf{M}$ is the system inertia matrix and $\mathbf{F}$ is the total force vector.
+The velocity transition can thus be expressed as
+\begin{equation}
+    \label{eq:acc}
+    \dot{\upsilon} = \mathbf{M}^{-1}F
+\end{equation}
+The total forces can be divided into the Coriolis–centripetal matrix $\mathbf{C}$ and the damping matrix $\mathbf{D}$ \citep{fossen_handbook_2021}. The control forces from the rudder and propeller are included in the $\mathbf{D}$ matrix.
+\begin{equation}
+    \label{eq:upsilon1d}
+F = - \mathbf{C} \upsilon + \mathbf{D}
+\end{equation}
+The Coriolis–centripetal matrix is split into an added mass contribution $\mathbf{C_A}$ and a rigid body contribution $\mathbf{C_{RB}}$
+\begin{equation}
+    \label{eq:C}
+    \input{equations/155.10_Fossen_model.C}
+\end{equation}
+and the same goes for the system inertia matrix
+\begin{equation}
+    \label{eq:M}
+    \input{equations/155.10_Fossen_model.M}
+\end{equation}
+The added mass Coriolis–centripetal matrix $\mathbf{C_A}$ according to [[@imlayCOMPLETEEXPRESSIONSADDED1961]].
+\begin{equation}
+    \label{eq:C_A}
+    \input{equations/155.10_Fossen_model.C_A}
+\end{equation}
+The mass Coriolis–centripetal matrix $\mathbf{C_RB}$.
+\begin{equation}
+    \label{eq:C_RB}
+    \input{equations/155.10_Fossen_model.C_RB}
+\end{equation}
+The added mass matrix $\mathbf{M_A}$
+\begin{equation}
+    \label{eq:M_A}
+    \input{equations/155.10_Fossen_model.M_A}
+\end{equation}
+where $X_{\dot{u}},Y_{\dot{v}},Y_{\dot{r}},N_{\dot{v}},N_{\dot{r}} < 0$. 
+The rigid body mass matrix $\mathbf{M_RB}$.
+\begin{equation}
+    \label{eq:M_RB}
+    \input{equations/155.10_Fossen_model.M_RB}
+\end{equation}
+Inserting \autoref{eq:M_A} and \autoref{eq:M_RB} into \autoref{eq:M}
+\begin{equation}
+    \label{eq:M_expanded}
+    \input{equations/155.10_Fossen_model.M_expanded}
+\end{equation}
+For the calculation of acceleration \autoref{eq:acc}, the inverse of the mass matrix $\mathbf{M}$ can be calculated as:
+\begin{equation}
+    \label{eq:M_inv}
+    \input{equations/155.10_Fossen_model.M_inv}
+\end{equation}
+with the helper variable $S$:
+\begin{equation}
+    \label{eq:S}
+    \input{equations/155.10_Fossen_model.S}
+\end{equation}
+Inserting \autoref{eq:C_A} and \autoref{eq:C_RB} into \autoref{eq:C}
+\begin{equation}
+    \label{eq:C_expanded}
+    \input{equations/155.10_Fossen_model.C_expanded}
+\end{equation}
+If we introduce the damping forces vector:
+\begin{equation}
+    \label{eq:D}
+    \input{equations/155.10_Fossen_model.D}
+\end{equation}
+the total force vector $F$ can now be expressed as:
+\begin{equation}
+    \label{eq:F_expanded}
+    %\input{equations/155.10_Fossen_model.F_expanded}
+F = 
+\left[\begin{matrix}
+X \\
+Y \\
+N \\
+\end{matrix}\right]
+=
+\left[\begin{matrix}X_{D} - Y_{\dot{r}} r^{2} + m r^{2} x_{G} + r v \left(- Y_{\dot{v}} + m\right)\\Y_{D} + r u \left(X_{\dot{u}} - m\right)\\N_{D} + r u \left(Y_{\dot{r}} - m x_{G}\right) + \underbrace{u v \left(- X_{\dot{u}} + Y_{\dot{v}}\right)}_{\text{Munk moment}} \end{matrix}\right]
+\end{equation}
+The yawing moment $N$ has the so called Munk moment \citep{fossen_handbook_2021}:
+$$
+u v \left(- X_{\dot{u}} + Y_{\dot{v}}\right)
+$$
+The sway force $Y$ has the apparent centrifugal force from added mass and rigid body mass: 
+$$r u \left(X_{\dot{u}} - m\right)$$ where $X_{\dot{u}}<0$ so that both added mass and rigid body mass create the centrifugal force acting outward in the turn. Both the added mass and rigid body mass will thus act to starboard on a port turn.
