@@ -17,7 +17,8 @@
 %% Template article for Elsevier's document class `elsarticle'
 %% with harvard style bibliographic references
 
-\documentclass[preprint,12pt,authoryear]{elsarticle}
+%\documentclass[preprint,12pt,authoryear]{elsarticle}
+\documentclass[preprint,9pt,authoryear]{elsarticle}
 
 %% Use the option review to obtain double line spacing
 %%\documentclass[authoryear,preprint,review,12pt]{elsarticle}
@@ -202,23 +203,30 @@
 \end{table}
 \FloatBarrier
 
+
 \section{Introduction}
 \label{sec:introduction}
-
 \section{Model}
 \input{model}
 \subsection{Hull}
 \input{model_hull}
 \subsection{Rudder}
 \input{model_rudder}
+
+
 \section{Methodology}
 \subsection{Inertia}
 \input{methodology_mass_forces}
 %\subsection{VCT matrix for wPCC}
 %\input{methodology_VCT_wPCC}
+\subsection{Inverse dynamics analysis}
+\subsection{state VCT}
 \subsection{Hydrodynamic forces from VCT}
 \input{methodology_VCT_optiwise}
+\subsection{wPCC test case}
+\subsection{Optiwise test case}
 \FloatBarrier
+
 
 \section{Results}
 \label{sec:results}
@@ -250,6 +258,7 @@
 \subsection{Rudder inflow analysis Optiwise}
 \input{result_optiwise_rudder_velocities}
 \FloatBarrier
+
 
 \section{Discussion}
 \label{sec:discussion}
