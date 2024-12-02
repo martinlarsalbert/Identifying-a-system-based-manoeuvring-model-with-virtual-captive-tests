@@ -1,4 +1,4 @@
-The Optiwse test case is an ordinary VLCC tanker but with a larger rudder size adopted for WASP as shown in the scale model in  \autoref{fig:wPCC}. 
+The Optiwse test case is an ordinary VLCC tanker but with a larger rudder size adopted for WASP as shown in the scale model in  \autoref{fig:wPCC} and the main particular in \autoref{tab:main_particulars_optiwise}. 
 \autoref{tab:main_particulars} shows the main particulars of the scale model. 
 \begin{figure}[h]
     \centering
@@ -6,10 +6,9 @@ The Optiwse test case is an ordinary VLCC tanker but with a larger rudder size a
     \caption{Scale model of the Optiwise used in the model tests. Copyright RISE.}
     \label{fig:wPCC}
 \end{figure}
-Required input parameters for the semi-empirical rudder model are summarized in \autoref{tab:other_parameters}.
 \begin{table}[h]
     \centering
-    \caption{Main particulars (SI units) of the wPCC scale model.}
+    \caption{Main particulars (SI units) of the Optiwise scale model.}
     \label{tab:main_particulars_optiwise}
     \pgfplotstabletypeset[col sep=comma, column type=r,
         columns/Parameter/.style={column type=l,string type},
@@ -18,5 +17,5 @@ Required input parameters for the semi-empirical rudder model are summarized in 
         columns/Value/.style={column type=r, column name=~},
         every head row/.style={before row=\hline,after row=\hline},
         every last row/.style={after row=\hline}
-    ]{tables/result_models.main_particulars.csv}
+    ]{tables/test_case_optiwise.main_particulars.csv}
 \end{table}
