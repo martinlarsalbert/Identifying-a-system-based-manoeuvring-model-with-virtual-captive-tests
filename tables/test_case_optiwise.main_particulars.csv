@@ -1,0 +1,11 @@
+Parameter,Value,Description
+$\mathtt{\text{B}}$,0.8823529411222136,Breadth
+$\mathtt{\text{D}}$,0.15588235293159106,Propeller diameter
+$I_{zz}$,1471.5096397140396,Yaw moment of inertia around midship
+$\mathtt{\text{L}}$,4.77941176441199,Length between perpendiculars
+$T_{m}$,0.30147058821675626,Mean draught
+$\mathtt{\text{m}}$,1008.7268469541564,Ship mass
+Scale factor,68.0000000041814,
+$t_{df}$,0.21,Thrust deduction factor
+$x_{G}$,0.17636764704797847,Longitudinal c.o.g.
+$\mathtt{\text{y\_p}}$,0.0,
