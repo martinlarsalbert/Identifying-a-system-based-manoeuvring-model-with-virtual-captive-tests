@@ -205,9 +205,13 @@
 \section{Introduction}
 \label{sec:introduction}
 
-\section{Methodology}
-\subsection{Model}
+\section{Model}
 \input{model}
+\subsection{Hull}
+\input{model_hull}
+\subsection{Rudder}
+\input{model_rudder}
+\section{Methodology}
 \subsection{Inertia}
 \input{methodology_mass_forces}
 %\subsection{VCT matrix for wPCC}
@@ -225,12 +229,12 @@
 %\input{result_wPCC_VCT}
 %\FloatBarrier
 
-%\subsection{Inverse dynamics analysis wPCC}
-%\input{result_wPCC_ID}
-%\FloatBarrier
-%\subsection{Closed loop simulations wPCC}
-%\input{result_wPCC_closed_loop}
-%\FloatBarrier
+\subsection{Inverse dynamics analysis wPCC}
+\input{result_wPCC_ID}
+\FloatBarrier
+\subsection{Closed loop simulations wPCC}
+\input{result_wPCC_closed_loop}
+\FloatBarrier
 
 \subsection{VCT Optiwise}
 \input{result_optiwise_VCT}
@@ -270,7 +274,8 @@
 %%
 \pagebreak
 \bibliographystyle{elsarticle-harv}
-\bibliography{Paper_3_semiempirical_rudder.bib}
+%\bibliography{Paper_3_semiempirical_rudder.bib}
+\bibliography{Paper_5.bib}
 
 \end{document}
 

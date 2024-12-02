@@ -29,7 +29,7 @@ and the same goes for the system inertia matrix
     \label{eq:M}
     \input{equations/155.10_Fossen_model.M}
 \end{equation}
-The added mass Coriolis–centripetal matrix $\mathbf{C_A}$ according to [[@imlayCOMPLETEEXPRESSIONSADDED1961]].
+The added mass Coriolis–centripetal matrix $\mathbf{C_A}$ according to \citep{imlayCOMPLETEEXPRESSIONSADDED1961}.
 \begin{equation}
     \label{eq:C_A}
     \input{equations/155.10_Fossen_model.C_A}
@@ -45,7 +45,7 @@ The added mass matrix $\mathbf{M_A}$
     \input{equations/155.10_Fossen_model.M_A}
 \end{equation}
 where $X_{\dot{u}},Y_{\dot{v}},Y_{\dot{r}},N_{\dot{v}},N_{\dot{r}} < 0$. 
-The rigid body mass matrix $\mathbf{M_RB}$.
+The rigid body mass matrix $\mathbf{M_{RB}}$.
 \begin{equation}
     \label{eq:M_RB}
     \input{equations/155.10_Fossen_model.M_RB}
@@ -88,7 +88,7 @@ N \\
 =
 \left[\begin{matrix}X_{D} - Y_{\dot{r}} r^{2} + m r^{2} x_{G} + r v \left(- Y_{\dot{v}} + m\right)\\Y_{D} + r u \left(X_{\dot{u}} - m\right)\\N_{D} + r u \left(Y_{\dot{r}} - m x_{G}\right) + \underbrace{u v \left(- X_{\dot{u}} + Y_{\dot{v}}\right)}_{\text{Munk moment}} \end{matrix}\right]
 \end{equation}
-The yawing moment $N$ has the so called Munk moment \citep{fossen_handbook_2021}:
+The yawing moment $N$ has the so called Munk moment \citep{fossenHandbookMarineCraft2011}:
 $$
 u v \left(- X_{\dot{u}} + Y_{\dot{v}}\right)
 $$
