@@ -13,6 +13,35 @@ The total forces from the VCT $X_{VCT}$, $Y_{VCT}$, and $N_{VCT}$ are recalculat
     N_{D} = N_{VCT} + X_{\dot{u}} u v - Y_{\dot{r}} r u - Y_{\dot{v}} u v
 \end{equation}
 The mass $m$ has disappeared from \autoref{eq:F_expanded} to arrive at these expressions, because the ship is not moving in ShipFlow, instead the water is having an either oblique or circular inflow \citep{roychoudhuryCFDSimulationsSteady2017}.
+% wPCC
+\begin{table}[h]
+    \centering
+    \small
+    \caption{VCT variations for wPCC.}
+    \label{tab:inflow_to_rudder_force}
+    \pgfplotstabletypeset[col sep=comma, column type=c, style=string type,
+        columns/Test type/.style={column type=l,string type},
+        columns/V/.style={column type=c,string type, column name=$V$ [m/s]},
+        columns/beta_deg/.style={column type=c,string type, column name=$\beta$ [deg]},
+        columns/r/.style={column type=c,string type, column name=$r$ [rad/s]},
+        columns/delta_deg/.style={column type=c,string type, column name=$\delta$ [deg]},
+        columns/rev/.style={column type=c,string type, column name=rev [1/s]},
+        %columns/r/.style={column type=r,fixed,fixed zerofill,precision=2, column name=$r$ [rad/s]},
+        %columns/V_R/.style={fixed,fixed zerofill,precision=2, column name=$V_R$ [m/s]},
+        %columns/gamma_deg/.style={fixed,fixed zerofill,precision=1, column name=$\gamma$ [deg]},
+        %columns/Y_R/.style={fixed,fixed zerofill,precision=1, column name=$Y_R^{VCT}$ [N]},
+        %columns/Y_R_MMG/.style={fixed,fixed zerofill,precision=1, column name=$Y_R^{MMG}$ [N]},
+        every head row/.style={before row=\hline,after row=\hline},
+        every last row/.style={after row=\hline}
+    ]{tables/methodology_VCT_wPCC.variations.csv}
+\end{table}
+\begin{figure}[h]
+    \includesvg{figures/methodology_VCT_wPCC.phase_plot.svg}
+    \caption{Phase plots of the wPCC zigzag tests together with the coverage of the VCTs and extra state VCTs.}
+    \label{fig:VCT_phase_plot_wPCC}
+\end{figure}
+
+% Optiwise
 \begin{table}[h]
     \centering
     \small
