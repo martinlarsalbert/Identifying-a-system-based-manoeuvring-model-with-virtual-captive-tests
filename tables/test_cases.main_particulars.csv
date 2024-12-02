@@ -8,5 +8,3 @@ $\mathtt{\text{m}}$,441.0267843660858,1008.7268469541564,Ship mass
 Scale factor,41.2,68.0000000041814,
 $t_{df}$,0.117,0.21,Thrust deduction factor
 $x_{G}$,-0.23989669902912625,0.17636764704797847,Longitudinal c.o.g.
-$\mathtt{\text{y\_p\_port}}$,-0.2176,,
-$\mathtt{\text{y\_p\_stbd}}$,0.2176,,
