@@ -1,7 +1,7 @@
 The mass properties of the ship, including the added masses, need to be determined in order to conduct simulations or inverse dynamics with the ship model. The rigid body mass and mass inertia were determined with swing tests in air before conducting the FMT at RISE MDL. The vertical centre of gravity (VCG) was determined with inclining experiments with the scale model in the MDL basin.
 
 The yaw added mass $N_{\dot{r}}$ was determined with the Fourier series method \citep{sakamotoURANSSimulationsStatic2012} applied on a pure yaw test conducted in a fully non-linear free surface potential flow panel method in ShipFlow Motions (Motions) \citep{kjellbergFullyNonlinearUnsteady2013}.
-During the pure yaw test the heading $\Psi$ is varied according to \autoref{eq:pure_yaw_psi} so that the yaw rate $r$ and yaw acceleration $\dot{r}$ are varied according to \autoref{eq:pure_yaw_r}, and \autoref{eq:pure_yaw_r1d}.
+During the pure yaw test the heading $\Psi$ was varied according to \autoref{eq:pure_yaw_psi} so that the yaw rate $r$ and yaw acceleration $\dot{r}$ were varied according to \autoref{eq:pure_yaw_r}, and \autoref{eq:pure_yaw_r1d}.
 \begin{equation}
     \Psi = - \Psi_{max} \cos{\left(t w \right)}
     \label{eq:pure_yaw_psi}
@@ -28,7 +28,7 @@ The time series for the yawing moment during the pure yaw test could thus be exp
     \end{align}
     \label{eq:MOTIONS_N_expanded}
 \end{equation}
-\autoref{eq:MOTIONS_N_expanded} can instead be expressed as a Fourier series with three components as shown in \autoref{eq:fourier} where $N_{\dot{r}}$ can be calculated from the first cosine coefficient (\autoref{eq:N_r1d}).
+\autoref{eq:MOTIONS_N_expanded} can instead be expressed as a Fourier series with three components as shown in \autoref{eq:fourier} where $N_{\dot{r}}$ can be calculated from the first cosine coefficient (\autoref{eq:N_r1d}). An example of the fitted Fourier series is shown in \autoref{fig:fourier}.
 \begin{equation}
     N_M = N_0 + \sum_{n=1}^3a_n \cos(n \omega t) + \sum_{n=1}^3b_n \sin(n \omega t) 
     \label{eq:fourier}
@@ -38,7 +38,7 @@ The time series for the yawing moment during the pure yaw test could thus be exp
     \label{eq:N_r1d}
 \end{equation}
 The sway added mass $Y_{\dot{v}}$ was determined in a similar way, but instead by conducting a pure sway test. The coupled added masses $N_{\dot{v}}$, and $Y_{\dot{r}}$ were determined with strip theory calculations using Franks close fit method.
-\begin{figure}
+\begin{figure}[h]
     \centering
     \includesvg{figures/methodology_pure_yaw_no_FFT.reconstruction.svg}
     \caption{Fourier series fit to the pure yaw Motions results to determine the yaw added mass for wPCC.}
