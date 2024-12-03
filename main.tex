@@ -80,7 +80,7 @@
 
     %\title{System identification of a physics-informed ship model for better predictions in wind conditions}
     %\title{Virtual Captive Tests for Identifying System-Based Manoeuvring Models}
-    \title{Virtual captive tests for standard ship manoeuvres}
+    \title{Identification of manoeuvring models for wind-assisted ships with large rudders using virtual captive tests}
     
 
     %% use optional labels to link authors explicitly to addresses:
@@ -197,6 +197,7 @@
     MMG & Manoeuvring modeling group \\
     OLS & Ordinary least-square \\
     RHI & Rudder hull interaction \\
+    RISE & Research institutes of Sweden \\
     VCT & Virtual captive tests \\
     WASP & wind-assisted ship propulsion \\
     wPCC & Wind powered car carrier test case\\
@@ -217,6 +218,11 @@
 %%%%%%%%%%%%%%%
 \section{Model}
 \input{model}
+\subsection{Prime system}
+\label{sec:prime_system}
+\input{prime_system}
+\input{prime_system_table}
+\FloatBarrier
 \subsection{Hull}
 \input{model_hull}
 \subsection{Rudder}
@@ -239,6 +245,7 @@
 \subsection{state VCT}
 \subsection{Hydrodynamic forces from VCT}
 \input{methodology_VCT}
+\FloatBarrier
 \subsection{Preprocessing experimental data}
 \input{methodology_preprocessing}
 \FloatBarrier
