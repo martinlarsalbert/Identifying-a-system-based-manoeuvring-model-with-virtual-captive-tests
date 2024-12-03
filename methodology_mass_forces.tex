@@ -1,4 +1,19 @@
 The mass properties of the ship, including the added masses, need to be determined in order to conduct simulations or inverse dynamics with the ship model. The rigid body mass and mass inertia were determined with swing tests in air before conducting the FMT at RISE MDL. The vertical centre of gravity (VCG) was determined with inclining experiments with the scale model in the MDL basin.
 
-The yaw added mass $N_{\dot{r}}$ was determined with the Fourier series method \citep{sakamotoURANSSimulationsStatic2012} applied on a pure yaw test conducted in ShipFlow Motion (see [[Pure yaw test]]. 
+The yaw added mass $N_{\dot{r}}$ was determined with the Fourier series method \citep{sakamotoURANSSimulationsStatic2012} applied on a pure yaw test conducted in ShipFlow Motions \citep{kjellbergFullyNonlinearUnsteady2013}.
+During the pure yaw test the heading $\Psi$ is varied according to \autoref{eq:pure_yaw_psi} so that the yaw rate $r$ and yaw acceleration $\dot{r}$ are varied according to \autoref{eq:pure_yaw_r}, and \autoref{eq:pure_yaw_r1d}.
+\begin{equation}
+    \Psi = - \Psi_{max} \cos{\left(t w \right)}
+    \label{eq:pure_yaw_psi}
+\end{equation}
+\begin{equation}
+    r = \Psi_{max} w \sin{\left(t w \right)}
+    \label{eq:pure_yaw_r}
+\end{equation}
+\begin{equation}
+    \dot{r} = \Psi_{max} w^{2} \cos{\left(t w \right)}
+    \label{eq:pure_yaw_r1d}
+\end{equation}
+
+
 The sway added mass $Y_{\dot{v}}$ were determined in a similar way, but instead by conducting a pure sway test (see [[Pure sway test]]). The coupled added masses $N_{\dot{v}}$, and $Y_{\dot{r}}$ were determined with strip theory calculations using Franks close fit method.
