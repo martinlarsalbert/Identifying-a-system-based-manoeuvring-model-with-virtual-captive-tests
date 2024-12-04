@@ -35,11 +35,11 @@ The mass $m$ has disappeared from \autoref{eq:F_expanded} to arrive at these exp
         every last row/.style={after row=\hline}
     ]{tables/methodology_VCT_wPCC.variations.csv}
 \end{table}
-\begin{figure}[h]
-    \includesvg{figures/methodology_VCT_wPCC.phase_plot.svg}
-    \caption{Phase plots of the wPCC zigzag tests together with the coverage of the VCTs and extra state VCTs.}
-    \label{fig:VCT_phase_plot_wPCC}
-\end{figure}
+%\begin{figure}[h]
+%    \includesvg{figures/methodology_VCT_wPCC.phase_plot.svg}
+%    \caption{Phase plots of the wPCC zigzag tests together with the coverage of the VCTs and extra state VCTs.}
+%    \label{fig:VCT_phase_plot_wPCC}
+%\end{figure}
 
 % Optiwise
 \begin{table}[h]
@@ -63,8 +63,26 @@ The mass $m$ has disappeared from \autoref{eq:F_expanded} to arrive at these exp
         every last row/.style={after row=\hline}
     ]{tables/methodology_VCT_optiwise.variations.csv}
 \end{table}
+%\begin{figure}[h]
+%    \includesvg{figures/methodology_VCT_optiwise.phase_plot.svg}
+%    \caption{Phase plots of the Optiwise zigzag tests together with the coverage of the VCTs and extra state VCTs.}
+%    \label{fig:VCT_phase_plot_optiwise}
+%\end{figure}
 \begin{figure}[h]
-    \includesvg{figures/methodology_VCT_optiwise.phase_plot.svg}
-    \caption{Phase plots of the Optiwise zigzag tests together with the coverage of the VCTs and extra state VCTs.}
-    \label{fig:VCT_phase_plot_optiwise}
+     \centering
+     \begin{subfigure}[b]{0.49\textwidth}
+         \centering
+         \includesvg{figures/methodology_VCT_wPCC.phase_plot.svg}
+        \caption{wPCC.}
+        \label{fig:VCT_phase_plot_wPCC}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.49\textwidth}
+        \centering
+        \includesvg{figures/methodology_VCT_optiwise.phase_plot.svg}
+        \caption{Optiwise.}
+        \label{fig:VCT_phase_plot_optiwise}
+     \end{subfigure}
+        \caption{Phase plots of the zigzag tests together with the coverage of the VCTs and extra state VCTs.}
+        \label{fig:roll_center}
 \end{figure}
