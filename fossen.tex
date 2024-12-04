@@ -1,23 +1,25 @@
-The ship’s kinematics are expressed amidship in a ship fixed reference frame, rotated around the Earth fixed axis $x_0$ by the heading angle $\Psi$. Forces and motions are expressed in the surge $X$, sway $Y$ , and yaw $N$ degrees of freedom. The kinematics can be expressed as function of a velocity vector $\mathbf{\upsilon}$, since the forces do not depend on the position ($x_0,y_0$) or heading $\Psi$, during the manoeuvre.
+The ship’s kinematics are expressed amidship in a ship fixed reference frame, rotated around the Earth fixed axis $x_0$ by the heading angle $\Psi$. Forces and motions are expressed in the surge $X$, sway $Y$ , and yaw $N$ degrees of freedom. The kinematics can be expressed as function of a velocity vector $\pmb{\bm{\upsilon}}$, since the forces do not depend on the position ($x_0,y_0$) or heading $\Psi$, during the manoeuvre.
 \begin{equation}
     \label{eq:upsilon}
-    \input{equations/155.10_Fossen_model.upsilon}
+    %\input{equations/155.10_Fossen_model.upsilon}
+    \pmb{\bm{\upsilon}} = \left[\begin{matrix}u\\v\\r\end{matrix}\right]
 \end{equation}
 The equation of motion can thus be expressed as
 \begin{equation}
     \label{eq:upsilon1d}
-    \input{equations/155.10_Fossen_model.upsilon1d}
+    %\input{equations/155.10_Fossen_model.upsilon1d}
+    \pmb{\bm{\dot{\upsilon}}} = \left[\begin{matrix}\dot{u}\\\dot{v}\\\dot{r}\end{matrix}\right]
 \end{equation}
-where $\mathbf{\dot{\upsilon}}$ is the acceleration vector, $\mathbf{M}$ is the system inertia matrix and $\mathbf{F}$ is the total force vector.
+where $\pmb{\bm{\dot{\upsilon}}}$ is the acceleration vector, $\mathbf{M}$ is the system inertia matrix and $\mathbf{F}$ is the total force vector.
 The velocity transition can thus be expressed as
 \begin{equation}
     \label{eq:acc}
-    \dot{\upsilon} = \mathbf{M}^{-1}F
+    \pmb{\bm{\dot{\upsilon}}} = \mathbf{M}^{-1}\mathbf{F}
 \end{equation}
 The total forces can be divided into the Coriolis–centripetal matrix $\mathbf{C}$ and the damping matrix $\mathbf{D}$ \citep{fossenHandbookMarineCraft2011}. The control forces from the rudder and propeller are included in the $\mathbf{D}$ matrix.
 \begin{equation}
     \label{eq:upsilon1d}
-F = - \mathbf{C} \upsilon + \mathbf{D}
+\mathbf{F} = - \mathbf{C} \upsilon + \mathbf{D}
 \end{equation}
 The Coriolis–centripetal matrix is split into an added mass contribution $\mathbf{C_A}$ and a rigid body contribution $\mathbf{C_{RB}}$
 \begin{equation}
@@ -75,11 +77,11 @@ If we introduce the damping forces vector:
     \label{eq:D}
     \input{equations/155.10_Fossen_model.D}
 \end{equation}
-the total force vector $F$ can now be expressed as:
+the total force vector $\bm{F}$ can now be expressed as:
 \begin{equation}
     \label{eq:F_expanded}
     %\input{equations/155.10_Fossen_model.F_expanded}
-F = 
+\mathbf{F} = 
 \left[\begin{matrix}
 X \\
 Y \\
