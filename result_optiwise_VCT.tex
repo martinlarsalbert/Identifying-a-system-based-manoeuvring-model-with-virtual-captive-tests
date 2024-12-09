@@ -184,8 +184,8 @@ The identified hull parameters for both wPCC and Optiwise are shown in \autoref{
 \end{table}
 \begin{table}[h]
     \centering
-    \caption{Semi-empirical rudder parameters (SI units) in model scale.}
-    \label{tab:other_parameters}
+    \caption{wPCC Semi-empirical rudder parameters (SI units) in model scale.}
+    \label{tab:wPCC_other_parameters}
     \pgfplotstabletypeset[col sep=comma, column type=r,
     columns/Parameter/.style={column type=l,string type,column name=Par.},
     columns/Parameter1/.style={column type=l,string type, column name=Par.},
@@ -199,4 +199,23 @@ The identified hull parameters for both wPCC and Optiwise are shown in \autoref{
     every head row/.style={before row=\hline,after row=\hline},
     every last row/.style={after row=\hline}
     ]{tables/result_models.wPCC_other_parameters.csv}
+\end{table}
+
+\begin{table}[h]
+    \centering
+    \caption{Optiwise MMG rudder parameters.}
+    \label{tab:optiwise_other_parameters}
+    \pgfplotstabletypeset[col sep=comma, column type=r,
+    columns/Parameter/.style={column type=l,string type,column name=Par.},
+    columns/Parameter1/.style={column type=l,string type, column name=Par.},
+    columns/Parameter2/.style={column type=l,string type, column name=Par.},
+    columns/Value/.style={column type=r, column name=~},
+    columns/Value1/.style={column type=r, column name=~},
+    columns/Value2/.style={column type=r, column name=~},
+    columns/Unit/.style={column type=l,string type, column name=~},
+    columns/Unit1/.style={column type=l,string type, column name=~},
+    columns/Unit2/.style={column type=l,string type, column name=~},
+    every head row/.style={before row=\hline,after row=\hline},
+    every last row/.style={after row=\hline}
+    ]{tables/result_models.optiwise_other_parameters.csv}
 \end{table}
