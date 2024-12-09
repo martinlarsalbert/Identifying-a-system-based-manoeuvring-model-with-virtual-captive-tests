@@ -1,4 +1,4 @@
-Instead of using the the equation of motion (\autoref{eq:acc}) to predict the acceleration vector $\mathbf{\dot{\mathbf{\upsilon}}}$, this equation can instead be inverted to describe the inverse dynamics of the ship as shown in \autoref{eq:ID_X}-\autoref{eq:ID_N}. These expressions are used to estimate the forces acting on the ship during the FRMTs. These inverse dynamics forces can be compared to predictions with the manoeuvring models, to assess the force models. This is a more direct comparison, than for instance comparing the FRMTs with corresponding simulations with the manoeuvring models. 
+Instead of using the the equation of motion (\autoref{eq:acc}) to predict the acceleration $\pmb{\bm{\dot{\upsilon}}}$, this equation can instead be inverted to describe the inverse dynamics of the ship as shown in \autoref{eq:ID_X}-\autoref{eq:ID_N}.
 \begin{equation}
     \label{eq:ID_X}
     \input{equations/methodology_ID.X_D}
@@ -11,3 +11,4 @@ Instead of using the the equation of motion (\autoref{eq:acc}) to predict the ac
     \label{eq:ID_N}
     \input{equations/methodology_ID.N_D}
 \end{equation}
+These expressions are used to estimate the forces acting on the ship during the FRMTs, which is then compared to the model force predictions. This is a more informative way to assess the model, than to compare its simulations with the FRMTs results.

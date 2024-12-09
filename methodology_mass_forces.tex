@@ -1,4 +1,4 @@
-The mass properties of the ship, including the added masses, need to be determined in order to conduct simulations or inverse dynamics with the ship model. The rigid body mass and mass inertia were determined with swing tests in air before conducting the FMT at RISE MDL. The vertical centre of gravity (VCG) was determined with inclining experiments with the scale model in the MDL basin.
+The mass properties of the ship models, including the added masses, need to be determined in order to conduct simulations or inverse dynamics. The rigid body mass and mass inertia were determined with swing tests in air before conducting the FRMTs at RISE MDL. The vertical centre of gravity (VCG) was determined with inclining experiments with the scale models in the MDL basin.
 
 The yaw added mass $N_{\dot{r}}$ was determined with the Fourier series method \citep{sakamotoURANSSimulationsStatic2012} applied on a pure yaw test conducted in a a fully nonlinear potential flow (FNPF) panel method in ShipFlow Motions (Motions) \citep{kjellbergFullyNonlinearUnsteady2013}.
 During the pure yaw test the heading $\Psi$ was varied according to \autoref{eq:pure_yaw_psi} so that the yaw rate $r$ and yaw acceleration $\dot{r}$ were varied according to \autoref{eq:pure_yaw_r}, and \autoref{eq:pure_yaw_r1d}.
@@ -14,7 +14,7 @@ During the pure yaw test the heading $\Psi$ was varied according to \autoref{eq:
     \dot{r} = \Psi_{max} w^{2} \cos{\left(t w \right)}
     \label{eq:pure_yaw_r1d}
 \end{equation}
-The pure yaw calculations in Motions were conducted without propeller and rudder so that $N_D=N_H$ and the moment equilibrium with the yawing moment from the pressure integration in Motions $N_M$ could be expressed with \autoref{eq:MOTIONS_N}, where the yaw added mass $N_{dot{r}}$ was the coefficient of interest. 
+The pure yaw calculations in Motions were conducted without propeller and rudder so that $N_D=N_H$ and the moment equilibrium with the yawing moment from the pressure integration in Motions $N_M$ could be expressed with \autoref{eq:MOTIONS_N}, where the yaw added mass $N_{\dot{r}}$ was the coefficient of interest. 
 \begin{equation}
     \input{equations/methodology_pure_yaw_no_FFT.MOTIONS_N.tex}
     \label{eq:MOTIONS_N}
