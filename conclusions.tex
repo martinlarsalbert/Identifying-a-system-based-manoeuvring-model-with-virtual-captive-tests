@@ -3,30 +3,21 @@
 %methodology)
 %
 %The objective of this paper was to investigate if the PI model is physically more correct than a physics uninformed model (PU model), when they are both identified from zigzag model tests, and also to investigate how this affects the generalization.
-A proposed methodology to conduct inverse dynamics analysis of FRMT has been proposed and applied on experiments with two very different ships.
-%_________________________________________________________
-%Move 2: Summarizing and reporting key results. (oblig.)
-\begin{itemize}
-    \item The inverse dynamics analysis showed that the rudder force prediction
-was the main error source for both wPCC and Optiwise ships.
-    \item Extra VCT calculations have been conducted for some of the states during the maneuvers. There was generally good agreement between these calculations and the inverse dynamics forces from the experiments, which means that most of the errors of the models are introduced when fitting the VCT training data to the mathematical models rather than being inherent in the training data itself.
-    \item Deviations were however observed during the rudder angle changes, where the extra VCT did not agree well with the experiments, especially for the wPCC during the zigzag20/20 test -- perhaps the flow around a moving rudder is not so well captured by the static CFD calculations?
-    \item Unexplained sway force deviations were observed after the rudder changes for all the tests with Optiwise.
-    \item The polynomial rudder model is a flexible model that could be adapted to the VCT calculations, especially to refit the model when the extra state VCT calculations were conducted. This was more straight forward than refitting the more physically profound semi-empirical rudder model. However, when fitting a more flexible black box model like the polynomial model, care must be taken not to over fit the data.
-    \item The rudder inflow analysis for Optiwise showed that the undisturbed inflow angle varies a lot over the rudder span.
-    \item Predicting the rudder side force with the MMG model with the rudder span average inflow angle as input gave a good agreement with the VCT forces for starboard turns with positive drift angles or yaw rates, but not for port turns were the average inflow angle magnitude was smaller, which gave an exaggerated decline of the rudder force. 
-    \item Using the rudder span average inflow angle is thus too much of a simplification to the complex rudder inflow and being able to predict the rudder inflow correctly will not be enough to predict the rudder forces reliably; A more advanced modeling of the response to this inflow is also needed, one that accounts for the span-wise inflow variations. 
-\end{itemize}
+%A proposed methodology to conduct inverse dynamics analysis of FRMT has been proposed and applied on experiments with two very different ships.
+%%_________________________________________________________
+%%Move 2: Summarizing and reporting key results. (oblig.)
+%\begin{itemize}
+%    \item The inverse dynamics analysis showed that the rudder force prediction
+%was the main error source for both wPCC and Optiwise ships.
+%    \item Extra VCT calculations have been conducted for some of the states during the maneuvers. There was generally good agreement between these calculations and the inverse dynamics forces from the experiments, which means that most of the errors of the models are introduced when fitting the VCT training data to the mathematical models rather than being inherent in the training data itself.
+%    \item Deviations were however observed during the rudder angle changes, where the extra VCT did not agree well with the experiments, especially for the wPCC during the zigzag20/20 test -- perhaps the flow around a moving rudder is not so well captured by the static CFD calculations?
+%    \item Unexplained sway force deviations were observed after the rudder changes for all the tests with Optiwise.
+%    \item The polynomial rudder model is a flexible model that could be adapted to the VCT calculations, especially to refit the model when the extra state VCT calculations were conducted. This was more straight forward than refitting the more physically profound semi-empirical rudder model. However, when fitting a more flexible black box model like the polynomial model, care must be taken not to over fit the data.
+%    \item The rudder inflow analysis for Optiwise showed that the undisturbed inflow angle varies a lot over the rudder span.
+%    \item Predicting the rudder side force with the MMG model with the rudder span average inflow angle as input gave a good agreement with the VCT forces for starboard turns with positive drift angles or yaw rates, but not for port turns were the average inflow angle magnitude was smaller, which gave an exaggerated decline of the rudder force. 
+%    \item Using the rudder span average inflow angle is thus too much of a simplification to the complex rudder inflow and being able to predict the rudder inflow correctly will not be enough to predict the rudder forces reliably; A more advanced modeling of the response to this inflow is also needed, one that accounts for the span-wise inflow variations. 
+%\end{itemize}
 
-This work has led to a new idea about the way to conduct VCT calculations to assess the ship manoeuvring with system based models.   
-\begin{enumerate}
-    \item Build a VCT dataset with VCT parameter variations.
-    \item Identify a system based manoeuvring model from this data.
-    \item Conduct manoeuvring simulations with the system based model.
-    \item Conduct extra VCT calculations of some of the states during the simulations.
-    \item Validate that the forces from the system based model agree with the extra state VCT calculations.
-    \item If not, retrain the model and generate new extra VCT calculations to conduct a new validation.
-\end{enumerate}
 
 %_________________________________________________________
 %Move 3: Commenting on key results (making claims, explaining the results,
