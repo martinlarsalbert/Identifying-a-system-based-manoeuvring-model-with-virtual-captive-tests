@@ -1,4 +1,4 @@
-Forces predicted with the wPCC model equipped with either the semi-empirical rudder or the polynomial rudder have been compared with forces from the experiments, estimated by inverse dynamics. The semi-empirical model predicts larger yawing moment $N_D$ than the experiments or the polynomial model for the zigzag10/10 in \autoref{fig:ID_wPCC_10} and even more pronounced for the 20/20 test as shown in \autoref{fig:ID_wPCC_20}.  
+Forces predicted with the wPCC model equipped with the semi-empirical rudder model have been compared with inverse dynamics forces from the zigzag10/10 and zigzag20/20 tests as well as some state VCT calculations during the tests as shown in \autoref{fig:ID_wPCC_10} and \autoref{fig:ID_wPCC_20}. The model describes the underlying VCT data well, with reasonably good agreement with the state VCT, especially for the rudder yawing moment $N_R$. The inverse dynamics forces from the experiments were however quite different. This indicates that there is an inherent error in the VCT data itself, which is thus inherited by the model. The good agreement between the rudder forces points towards an error in the hull forces, which could be connected with missing wave generation forces in the VCT data.  
 %10/10
 \begin{figure}[h]
      \centering
@@ -7,11 +7,6 @@ Forces predicted with the wPCC model equipped with either the semi-empirical rud
      \label{fig:ID_wPCC_10}
 \end{figure}
 %20/20
-The $N_D$ deviations between the experiments and the force prediction model with semi-empirical rudder are of the same magnitude as the the difference between the rudder yawing moment $N_R$ predictions with the polynomial and semi-empirical rudder. This is especially pronounced for the zigzag20/20 (\autoref{fig:ID_wPCC_20}) which suggests that the deviations of the total yawing moment $N_D$ from the semi-empirical model originates from the rudder model predictions of $N_R$.
-
-There is generally good agreement between the polynomial model and the experiments. There are however some yawing moment $N_D$ deviations at t=9.5 s, and t=27 s, during the changes of rudder angle. 
-
-Extra VCT calculations have been conducted for some of the states during the maneuvers. There is generally a good agreement between these calculated states and the experimental forces. There are however small deviations for the yawing moment, especially around the rudder angle changes. 
 \begin{figure}[h]
     \includesvg{figures/results_wPCC_ID.zigzag 20_20.svg}
     \caption{Forces wPCC Zigzag20/20 to starboard.}
