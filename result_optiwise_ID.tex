@@ -1,7 +1,5 @@
-FRMT experiments with Optiwise were conducted as a continuation of the wPCC experiments. During these tests, rudder forces were measured during the experiments, to get a better understanding of the rudder forces during the maneuvers. Prediction models equipped with the semi-empirical rudder, the MMG rudder, or the polynomial rudder were developed. A fourth model was also developed, which uses the actual measured rudder force instead of a prediction model -- so that only the hull forces need to be predicted. 
-
-%10/10
-The total forces acting on the ship during the FRMT experiments were estimated with inverse dynamics, in the same way as how the wPCC results were analyzed. There was generally good agreement for the zigzag10/10, as shown in \autoref{fig:ID_optiwise10}. Deviations were however observed for the sway force $Y_D$ during about 3 seconds after the rudder changes at t=11--14 s, and t=35--38 s, as indicated in \autoref{fig:ID_optiwise10}. All of the models and the VCT calculations predict a more straight line in the $Y_D$ time series around these deviation points. 
+The rudder model within the Optiwise simulation model was replaced by the actual measured rudder forces during the experiments. There was generally good agreement between predictions with the measured rudder model and the corresponding inverse dynamics forces for the zigzag10/10 (\autoref{fig:ID_measured_rudder_zigzag_10_10}) and zigzag20/20 (\autoref{fig:ID_measured_rudder_zigzag_20_20}).
+Deviations were however observed for the sway force $Y_D$ during about 3 seconds after the rudder changes at t=11--14 s, and t=35--38 s, for the zigzag10/10 and t=11--14 s, t=35--38 s, t=64 s, for the zigzag20/20. The model and state VCT calculations predict a more straight line in the $Y_D$ time series around these deviation points. 
 A reasonable explanation to these deviations has not been found during the work for this paper, where filtration errors in the EKF were ruled out as a possible explanation, by conducting alternative analysis with a low-pass filter instead of the EKF. Accelerations were instead calculated with numeric differentiation of the low-pass filtered signals of repeated zigzag10/10 tests as shown in \autoref{fig:lowpass_deviation_points}.
 \begin{figure}[h]
     \centering
@@ -21,14 +19,14 @@ A reasonable explanation to these deviations has not been found during the work 
     \caption{Inverse dynamics forces during the zigzag tests compared to predictions with the measured rudder model.}
     \label{fig:ID_optiwise20}
 \end{figure}
-%20/20
-The force predictions for the zigzag20/20 is shown in \autoref{fig:ID_optiwise20}. Similar deviations as for the zigzag10/10 were observed for $Y_D$ after the rudder changes (t=11--14 s, t=35--38 s, t=64 s). The yawing moment $N_D$ was not well predicted for the MMG rudder in the end of the port turn (t=23--33 s), where the other models had better agreement with the experiments. When the ship started to turn back to starboard (t=43--62 s) only the measured rudder forces model and the polynomial rudder agreed well with the experiments. Just as for wPCC, the total yawing moment $N_D$ deviations seem to originate from the rudder yawing moment $N_R$ predictions.
 \begin{figure}[h]
     \centering
     \includesvg{figures/results_optiwise_deviation_points.lowpass.svg}
     \caption{Inverse dynamics sway force from repeated zigzag10/10 test to port. The accelerations have been estimated with the EKF and also with numeric differentiation of low-pass filtered signals.}
     \label{fig:lowpass_deviation_points}
 \end{figure}
+
+Given the good results with the measured rudder model, focus was on finding a good rudder force prediction model for Optiwise. The MMG original model and the MMG quadratic model -- proposed in this paper -- where fitted to the rudder forces from the VCT data. These models predicted similar forces during the zigzag tests which agreed quite well with the measured forces, especially for the zigzag20/20 test, as shown in \autoref{fig:ID_measured_rudder_zigzag_10_10} and \autoref{fig:ID_measured_rudder_zigzag_20_20}.
 \begin{figure}[h]
     \centering
     \begin{subfigure}[b]{\textwidth}
@@ -47,6 +45,8 @@ The force predictions for the zigzag20/20 is shown in \autoref{fig:ID_optiwise20
     \caption{Rudder forces during the zigzag tests compared to predictions with the MMG models.}
     \label{fig:ID_optiwise20}
 \end{figure}
+
+Similar agreement achieved by the measured rudder model could now be achieved by the models equipped with MMG rudder models, as shown in \autoref{fig:ID_optiwise20}.
 \begin{figure}[h]
     \centering
     \begin{subfigure}[b]{\textwidth}
@@ -66,21 +66,4 @@ The force predictions for the zigzag20/20 is shown in \autoref{fig:ID_optiwise20
     \label{fig:ID_optiwise20}
 \end{figure}
 
-%\begin{figure}[h]
-%     \centering
-%     \begin{subfigure}[b]{\textwidth}
-%         \centering
-%         \includesvg{figures/results_optiwise_ID.zigzag 10_10.svg}
-%        \caption{Forces Optiwise Zigzag10/10 to port.}
-%        \label{fig:ID_optiwise10}
-%     \end{subfigure}
-%     \vfill
-%     \begin{subfigure}[b]{\textwidth}
-%         \includesvg{figures/results_optiwise_ID.zigzag 20_20.svg}
-%        \caption{Forces Optiwise Zigzag20/20 to starboard.}
-%        \label{fig:ID_optiwise20}
-%     \end{subfigure}
-%        \caption{Comparison between forces during zigzag tests with Optiwise estimated with inverse dynamics from the experiments and predictions with a model equipped with either a polynomial rudder or semi-empirical rudder model. Forces from VCT calculations of some interesting states have also been added.}
-%        \label{fig:ID_optiwise}
-%\end{figure}
 
