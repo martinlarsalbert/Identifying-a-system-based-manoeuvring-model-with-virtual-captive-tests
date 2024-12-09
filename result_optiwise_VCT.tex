@@ -42,86 +42,81 @@ The newly added quadratic relationship for the flow straightening coefficient $\
 
 \autoref{fig:rudder_angle_Y_optiwise} shows that side force is generated both on the rudder and on the hull surface during the rudder angle variation, which is well predicted by the model through the rudder hull interaction coefficients $x_R$ and $a_R$. 
 
-The model predicts zero rudder drag when the rudder angle is zero at straight ahead condition as shown in \autoref{fig:rudder_angle_X_optiwise}. This is because the MMG rudder model has no base drag coefficient, which is a simplification compared to the VCT data.
-%Rudder angle
+The model predicts zero rudder drag when the rudder angle is zero at straight ahead condition as shown in \autoref{fig:rudder_angle_X_optiwise}. This is because the MMG rudder model has no base drag coefficient like the semi-empirical rudder model for the wPCC (see \autoref{fig:rudder_angle_X_wPCC}).
+
+Similar comparisons are shown for the drift angle tests in \autoref{fig:drift_angle_X_optiwise} -- \autoref{fig:drift_angle_N_optiwise} and the circle tests in \autoref{fig:circle_X_optiwise} -- \autoref{fig:circle_N_optiwise}. 
 \begin{figure}[h]
-     \centering
-     \begin{subfigure}[b]{0.32\textwidth}
+    \centering
+    %Rudder angle
+    \begin{subfigure}[b]{0.32\textwidth}
          \centering
          \includesvg{figures/results_optiwise_VCT.rudder_angle_X.svg}
-        \caption{Surge force.}
+        \caption{Rudder angle X.}
         \label{fig:rudder_angle_X_optiwise}
-     \end{subfigure}
-     \hfill
-     \begin{subfigure}[b]{0.32\textwidth}
-         \centering
-         \includesvg{figures/results_optiwise_VCT.rudder_angle_Y.svg}
-        \caption{Sway force.}
-        \label{fig:rudder_angle_Y_optiwise}
-     \end{subfigure}
-     \hfill
-     \begin{subfigure}[b]{0.32\textwidth}
-         \centering
-         \includesvg{figures/results_optiwise_VCT.rudder_angle_N.svg}
-        \caption{Yawing moment.}
-        \label{fig:rudder_angle_N_optiwise}
-     \end{subfigure}
-    \caption{Optiwise rudder angle tests from VCT (dots) and predictions (lines).}
-    \label{fig:rudder_angle_optiwise}
-\end{figure}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \centering
+        \includesvg{figures/results_optiwise_VCT.rudder_angle_Y.svg}
+       \caption{Rudder angle Y.}
+       \label{fig:rudder_angle_Y_optiwise}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \centering
+        \includesvg{figures/results_optiwise_VCT.rudder_angle_N.svg}
+       \caption{Rudder angle N.}
+       \label{fig:rudder_angle_N_optiwise}
+    \end{subfigure}
 
-Similar comparisons are shown for the drift angle tests in \autoref{fig:drift_angle_optiwise} and the circle tests in \autoref{fig:circle_optiwise}. 
-%Drift angle
-\begin{figure}[h]
-     \centering
-     \begin{subfigure}[b]{0.32\textwidth}
-         \centering
-         \includesvg{figures/results_optiwise_VCT.drift_angle_X.svg}
-        \caption{Surge force.}
-        \label{fig:drift_angle_X_optiwise}
-     \end{subfigure}
-     \hfill
-     \begin{subfigure}[b]{0.32\textwidth}
-         \centering
-         \includesvg{figures/results_optiwise_VCT.drift_angle_Y.svg}
-        \caption{Sway force.}
-        \label{fig:drift_angle_Y_optiwise}
-     \end{subfigure}
-     \hfill
-     \begin{subfigure}[b]{0.32\textwidth}
-         \centering
-         \includesvg{figures/results_optiwise_VCT.drift_angle_N.svg}
-        \caption{Yawing moment.}
-        \label{fig:drift_angle_N_optiwise}
-     \end{subfigure}
-    \caption{Optiwise drift angle tests from VCT (dots) and predictions (lines).}
-    \label{fig:drift_angle_optiwise}
-\end{figure}
-%Circle
-\begin{figure}[h]
-     \centering
-     \begin{subfigure}[b]{0.32\textwidth}
-         \centering
-         \includesvg{figures/results_optiwise_VCT.circle_X.svg}
-        \caption{Surge force.}
-        \label{fig:drift_angle_X_optiwise}
-     \end{subfigure}
-     \hfill
-     \begin{subfigure}[b]{0.32\textwidth}
-         \centering
-         \includesvg{figures/results_optiwise_VCT.circle_Y.svg}
-        \caption{Sway force.}
-        \label{fig:drift_angle_Y_optiwise}
-     \end{subfigure}
-     \hfill
-     \begin{subfigure}[b]{0.32\textwidth}
-         \centering
-         \includesvg{figures/results_optiwise_VCT.circle_N.svg}
-        \caption{Yawing moment.}
-        \label{fig:drift_angle_N_optiwise}
-     \end{subfigure}
-    \caption{Optiwise circle tests from VCT (dots) and predictions (lines).}
-    \label{fig:circle_optiwise}
+    \vfill
+    %Drift angle
+    \begin{subfigure}[b]{0.32\textwidth}
+        \centering
+        \includesvg{figures/results_optiwise_VCT.drift_angle_X.svg}
+       \caption{Drift angle X.}
+       \label{fig:drift_angle_X_optiwise}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \centering
+        \includesvg{figures/results_optiwise_VCT.drift_angle_Y.svg}
+       \caption{Drift angle Y.}
+       \label{fig:drift_angle_Y_optiwise}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \centering
+        \includesvg{figures/results_optiwise_VCT.drift_angle_N.svg}
+       \caption{Drift angle N.}
+       \label{fig:drift_angle_N_optiwise}
+    \end{subfigure}
+    
+    \vfill
+    %Circle
+    \begin{subfigure}[b]{0.32\textwidth}
+        \centering
+        \includesvg{figures/results_optiwise_VCT.circle_X.svg}
+       \caption{Circle X.}
+       \label{fig:circle_X_optiwise}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \centering
+        \includesvg{figures/results_optiwise_VCT.circle_Y.svg}
+       \caption{Circle Y.}
+       \label{fig:circle_Y_optiwise}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \centering
+        \includesvg{figures/results_optiwise_VCT.circle_N.svg}
+       \caption{Circle N.}
+       \label{fig:circle_N_optiwise}
+    \end{subfigure}
+    
+    \caption{Optiwise VCT (dots) and predictions (lines).}
+    \label{fig:VCT_optiwise}
 \end{figure}
 
 The coupling terms $Y_{vrr}$,$Y_{vvr}$,$N_{vrr}$, and $N_{vvr}$ in the hull force model (\autoref{eq:Y_H}, \autoref{eq:N_H}) where fitted from the circle and drift variations. These coupling terms are important as shown by the comparison with/without them in \autoref{fig:circle_drift_optiwise}.
