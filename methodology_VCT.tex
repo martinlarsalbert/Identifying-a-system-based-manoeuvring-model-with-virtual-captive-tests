@@ -1,4 +1,23 @@
-VCT calculations are conducted by solving a set of static flow calculations with CFD. The VCT test matrix is selected to have a good coverage of the states that the ship will have during the manoeuvre. How the combinations of drift angle and yaw rate have been selected can be seen in the figure below, for the wPCC. 
+VCT calculations are conducted by solving a set of static flow calculations with CFD. The VCT test matrices (\autoref{tab:VCT_wPCC}, \autoref{tab:VCT_optiwise}) are selected to have a good coverage of the states that the ship will have during the maneuver. How the combinations of drift angle and yaw rate have been selected is shown in \autoref{fig:phase_plots}, for the wPCC and Optiwise. 
+\begin{figure}[h]
+     \centering
+     \begin{subfigure}[b]{0.49\textwidth}
+         \centering
+         \includesvg{figures/methodology_VCT_wPCC.phase_plot.svg}
+        \caption{wPCC.}
+        \label{fig:VCT_phase_plot_wPCC}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.49\textwidth}
+        \centering
+        \includesvg{figures/methodology_VCT_optiwise.phase_plot.svg}
+        \caption{Optiwise.}
+        \label{fig:VCT_phase_plot_optiwise}
+     \end{subfigure}
+        \caption{Phase plots of the zigzag tests together with the coverage of the VCTs and extra state VCTs.}
+        \label{fig:phase_plots}
+\end{figure}
+
 The total forces from the VCT $X_{VCT}$, $Y_{VCT}$, and $N_{VCT}$ are recalculated in the following way, to obtain the damping forces.
 \begin{equation}
     \label{eq:X_D}
@@ -18,7 +37,7 @@ The mass $m$ has disappeared from \autoref{eq:F_expanded} to arrive at these exp
     \centering
     \small
     \caption{VCT variations for wPCC.}
-    \label{tab:inflow_to_rudder_force}
+    \label{tab:VCT_wPCC}
     \pgfplotstabletypeset[col sep=comma, column type=c, style=string type,
         columns/Test type/.style={column type=l,string type},
         columns/V/.style={column type=c,string type, column name=$V$ [m/s]},
@@ -68,21 +87,3 @@ The mass $m$ has disappeared from \autoref{eq:F_expanded} to arrive at these exp
 %    \caption{Phase plots of the Optiwise zigzag tests together with the coverage of the VCTs and extra state VCTs.}
 %    \label{fig:VCT_phase_plot_optiwise}
 %\end{figure}
-\begin{figure}[h]
-     \centering
-     \begin{subfigure}[b]{0.49\textwidth}
-         \centering
-         \includesvg{figures/methodology_VCT_wPCC.phase_plot.svg}
-        \caption{wPCC.}
-        \label{fig:VCT_phase_plot_wPCC}
-     \end{subfigure}
-     \hfill
-     \begin{subfigure}[b]{0.49\textwidth}
-        \centering
-        \includesvg{figures/methodology_VCT_optiwise.phase_plot.svg}
-        \caption{Optiwise.}
-        \label{fig:VCT_phase_plot_optiwise}
-     \end{subfigure}
-        \caption{Phase plots of the zigzag tests together with the coverage of the VCTs and extra state VCTs.}
-        \label{fig:roll_center}
-\end{figure}
