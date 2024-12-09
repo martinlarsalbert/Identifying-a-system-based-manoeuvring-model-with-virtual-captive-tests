@@ -1,56 +1,103 @@
 Similar comparisons are shown for the drift angle tests in \autoref{fig:drift_angle_optiwise} and the circle tests in \autoref{fig:circle_optiwise}. 
-%Drift angle
 \begin{figure}[h]
      \centering
+     %Drift angle
      \begin{subfigure}[b]{0.32\textwidth}
          \centering
          \includesvg{figures/results_wPCC_VCT.drift_angle_X.svg}
-        \caption{Surge force.}
+        \caption{Drift angle X.}
         \label{fig:drift_angle_X_wPCC}
      \end{subfigure}
      \hfill
      \begin{subfigure}[b]{0.32\textwidth}
          \centering
          \includesvg{figures/results_wPCC_VCT.drift_angle_Y.svg}
-        \caption{Sway force.}
+        \caption{Drift angle Y.}
         \label{fig:drift_angle_Y_wPCC}
      \end{subfigure}
      \hfill
      \begin{subfigure}[b]{0.32\textwidth}
          \centering
          \includesvg{figures/results_wPCC_VCT.drift_angle_N.svg}
-        \caption{Yawing moment.}
+        \caption{Drift angle N.}
         \label{fig:drift_angle_N_wPCC}
      \end{subfigure}
-    \caption{wPCC drift angle tests from VCT (dots) and predictions (lines).}
-    \label{fig:drift_angle_wPCC}
-\end{figure}
-%Circle
-\begin{figure}[h]
-     \centering
+    \vfill
+    
+     %Circle
      \begin{subfigure}[b]{0.32\textwidth}
          \centering
          \includesvg{figures/results_wPCC_VCT.circle_X.svg}
-        \caption{Surge force.}
-        \label{fig:drift_angle_X_wPCC}
+        \caption{Circle X.}
+        \label{fig:circle_X_wPCC}
      \end{subfigure}
      \hfill
      \begin{subfigure}[b]{0.32\textwidth}
          \centering
          \includesvg{figures/results_wPCC_VCT.circle_Y.svg}
-        \caption{Sway force.}
-        \label{fig:drift_angle_Y_wPCC}
+        \caption{Circle Y.}
+        \label{fig:circle_Y_wPCC}
      \end{subfigure}
      \hfill
      \begin{subfigure}[b]{0.32\textwidth}
          \centering
          \includesvg{figures/results_wPCC_VCT.circle_N.svg}
-        \caption{Yawing moment.}
-        \label{fig:drift_angle_N_wPCC}
+        \caption{Circle N.}
+        \label{fig:circle_N_wPCC}
      \end{subfigure}
-    \caption{wPCC circle tests from VCT (dots) and predictions (lines).}
-    \label{fig:circle_wPCC}
+
+    \vfill
+    %rudder angle
+     \begin{subfigure}[b]{0.32\textwidth}
+         \centering
+         \includesvg{figures/results_wPCC_VCT.rudder_angle_X.svg}
+        \caption{Rudder angle X.}
+        \label{fig:rudder_angle_X_wPCC}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.32\textwidth}
+         \centering
+         \includesvg{figures/results_wPCC_VCT.rudder_angle_Y.svg}
+        \caption{Rudder angle Y.}
+        \label{fig:rudder_angle_Y_wPCC}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.32\textwidth}
+         \centering
+         \includesvg{figures/results_wPCC_VCT.rudder_angle_N.svg}
+        \caption{Rudder angle N.}
+        \label{fig:rudder_angle_N_wPCC}
+     \end{subfigure}
+
+     \vfill
+     %Thrust variation
+     \begin{subfigure}[b]{0.32\textwidth}
+         \centering
+         \includesvg{figures/results_wPCC_VCT.thrust_variation_X.svg}
+        \caption{Thrust variation X.}
+        \label{fig:Thrust variation_X_wPCC}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.32\textwidth}
+         \centering
+         \includesvg{figures/results_wPCC_VCT.thrust_variation_Y.svg}
+        \caption{Thrust variation Y.}
+        \label{fig:Thrust variation_Y_wPCC}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.32\textwidth}
+         \centering
+         \includesvg{figures/results_wPCC_VCT.thrust_variation_N.svg}
+        \caption{Thrust variation N.}
+        \label{fig:Thrust variation_N_wPCC}
+     \end{subfigure}
+
+     
+    \caption{wPCC tests from VCT (dots) and predictions (lines).}
+    \label{fig:VCT_wPCC}
 \end{figure}
+
+
 
 The coupling terms $Y_{vrr}$,$Y_{vvr}$,$N_{vrr}$, and $N_{vvr}$ in the hull force model (\autoref{eq:Y_H}, \autoref{eq:N_H}) where fitted from the circle and drift variations. These coupling terms are important as shown by the comparison with/without them in \autoref{fig:circle_drift_wPCC}.
 %Circle + drift
@@ -85,7 +132,7 @@ The coupling terms $Y_{vrr}$,$Y_{vvr}$,$N_{vrr}$, and $N_{vvr}$ in the hull forc
         \label{fig:circle_drift_N_H_no_coupling_wPCC}
      \end{subfigure}
      
-    \caption{Hull forces during the circle and drift variations with/without the coupling terms, VCT (dots), fitted model (surface).}
+    \caption{wPCC hull forces during the circle and drift variations with/without the coupling terms, VCT (dots), fitted model (surface).}
     \label{fig:circle_drift_wPCC}
 \end{figure}
 
