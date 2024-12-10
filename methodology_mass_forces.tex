@@ -28,7 +28,7 @@ The time series for the yawing moment during the pure yaw test could thus be exp
     \end{align}
     \label{eq:MOTIONS_N_expanded}
 \end{equation}
-\autoref{eq:MOTIONS_N_expanded} can instead be expressed as a Fourier series with three components as shown in \autoref{eq:fourier} where $N_{\dot{r}}$ can be calculated from the first cosine coefficient (\autoref{eq:N_r1d}). An example of the fitted Fourier series is shown in \autoref{fig:fourier}.
+\autoref{eq:MOTIONS_N_expanded} can instead be expressed as a Fourier series with three components as shown in \autoref{eq:fourier} where $N_{\dot{r}}$ can be calculated from the first cosine coefficient (\autoref{eq:N_r1d}).
 \begin{equation}
     N_M = N_0 + \sum_{n=1}^3a_n \cos(n \omega t) + \sum_{n=1}^3b_n \sin(n \omega t) 
     \label{eq:fourier}
@@ -37,7 +37,7 @@ The time series for the yawing moment during the pure yaw test could thus be exp
     N_{\dot{r}} = \frac{a_1}{\Psi_{max} w^{2}}
     \label{eq:N_r1d}
 \end{equation}
-The sway added mass $Y_{\dot{v}}$ was determined in a similar way, but instead by conducting a pure sway test. The coupled added masses $N_{\dot{v}}$, and $Y_{\dot{r}}$ were determined with strip theory calculations using Franks close fit method.
+An example of the fitted Fourier series is shown in \autoref{fig:fourier}. The sway added mass $Y_{\dot{v}}$ was determined in a similar way, but instead by conducting a pure sway test. The coupled added masses $N_{\dot{v}}$, and $Y_{\dot{r}}$ were determined with strip theory calculations using Franks close fit method.
 \begin{figure}[h]
     \centering
     \includesvg{figures/methodology_pure_yaw_no_FFT.reconstruction.svg}

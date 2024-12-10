@@ -1,4 +1,10 @@
-The ship’s kinematics are expressed amidship in a ship fixed reference frame, rotated around the Earth fixed axis $x_0$ by the heading angle $\Psi$. Forces and motions are expressed in the surge $X$, sway $Y$ , and yaw $N$ degrees of freedom. The kinematics can be expressed as function of a velocity vector $\pmb{\bm{\upsilon}}$, since the forces do not depend on the position ($x_0,y_0$) or heading $\Psi$, during the manoeuvre.
+The ship’s kinematics are expressed amidship in a ship fixed reference frame, rotated around the Earth fixed axis $x_0$ by the heading angle $\Psi$ (\autoref{fig:reference_frames}). Forces and motions are expressed in the surge $X$, sway $Y$, and yaw $N$ degrees of freedom. The kinematics can be expressed as function of a velocity vector $\pmb{\bm{\upsilon}}$, since the forces do not depend on the position ($x_0,y_0$) or heading $\Psi$, during the manoeuvre.
+\begin{figure}[h]
+    \centering
+    \includesvg{figures/reference_frames.svg}
+    \caption{Relations between the earth fixed and ship fixed reference frames, showing the velocities and forced in the ship fixed frame.}
+    \label{fig:reference_frames}
+\end{figure}
 \begin{equation}
     \label{eq:upsilon}
     %\input{equations/155.10_Fossen_model.upsilon}
