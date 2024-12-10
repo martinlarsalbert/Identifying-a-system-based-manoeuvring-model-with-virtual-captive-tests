@@ -2,10 +2,18 @@
 %Move 1: Background information (research purposes, theory,
 %methodology)
 %
-
+Manoeuvring models were developed for two WASP test cases with large rudders. The models were identified by conducting VCTs to get the hydrodynamic damping coefficients and by conducting FNPF pure yaw and pure sway tests to get the added masses. The identified force models were compared with inverse dynamics forces from zigzag tests, to identify possible weak spots within the models.  
 %%_________________________________________________________
 %%Move 2: Summarizing and reporting key results. (oblig.)
+The added masses from the FNPF pure yaw and pure sway tests produced inverse dynamics forces that agreed well with the force prediction models and the state VCTs for Optiwise, which suggests that this is an accurate way to determine the added masses.
 
+Two enhancements to the MMG rudder model were proposed which improved the fit to the VCT data and also gave a little bit better results in the closed loop simulations.
+
+The coupling terms between sway and yaw rate was found to be important for both wPCC and Optiwise.
+
+The method to use inverse dynamics in combination with the state VCTs was found to be a useful tool to test the identified models and see if errors origin from the model structure or are inherent in the VCT data.
+It was for instance shown that the state VCT did not agree well with the wPCC inverse dynamics forces, which indicates that there is something missing in the wPCC VCT data. This could for instance be the lack of wave generation or heeled cases in the VCT data, which might be too much of a simplification for the wPCC.
+For Optiwise on the other hand, which was run at much lower Froude number and little heel, the state VCT agreed much better with the inverse dynamics forces and better agreement was obtained in the closed loop simulations.
 %_________________________________________________________
 %Move 3: Commenting on key results (making claims, explaining the results,
 %comparing the new work with previous studies, offering
@@ -13,41 +21,7 @@
 
 %_________________________________________________________
 %Move 4: Stating the limitations of the study
-
-%_________________________________________________________
-%Move 5: Making recommendations for future implementation and/or for
-%future research
-A propeller model needs to be added to the simulation model to create a self containing model to predict new manoeuvres. 
-
-%_________________________________________________________
-%Move 1: Background information (research purposes, theory,
-%methodology)
-%
-%The objective of this paper was to investigate if the PI model is physically more correct than a physics uninformed model (PU model), when they are both identified from zigzag model tests, and also to investigate how this affects the generalization.
-%A proposed methodology to conduct inverse dynamics analysis of FRMT has been proposed and applied on experiments with two very different ships.
-%%_________________________________________________________
-%%Move 2: Summarizing and reporting key results. (oblig.)
-%\begin{itemize}
-%    \item The inverse dynamics analysis showed that the rudder force prediction
-%was the main error source for both wPCC and Optiwise ships.
-%    \item Extra VCT calculations have been conducted for some of the states during the maneuvers. There was generally good agreement between these calculations and the inverse dynamics forces from the experiments, which means that most of the errors of the models are introduced when fitting the VCT training data to the mathematical models rather than being inherent in the training data itself.
-%    \item Deviations were however observed during the rudder angle changes, where the extra VCT did not agree well with the experiments, especially for the wPCC during the zigzag20/20 test -- perhaps the flow around a moving rudder is not so well captured by the static CFD calculations?
-%    \item Unexplained sway force deviations were observed after the rudder changes for all the tests with Optiwise.
-%    \item The polynomial rudder model is a flexible model that could be adapted to the VCT calculations, especially to refit the model when the extra state VCT calculations were conducted. This was more straight forward than refitting the more physically profound semi-empirical rudder model. However, when fitting a more flexible black box model like the polynomial model, care must be taken not to over fit the data.
-%    \item The rudder inflow analysis for Optiwise showed that the undisturbed inflow angle varies a lot over the rudder span.
-%    \item Predicting the rudder side force with the MMG model with the rudder span average inflow angle as input gave a good agreement with the VCT forces for starboard turns with positive drift angles or yaw rates, but not for port turns were the average inflow angle magnitude was smaller, which gave an exaggerated decline of the rudder force. 
-%    \item Using the rudder span average inflow angle is thus too much of a simplification to the complex rudder inflow and being able to predict the rudder inflow correctly will not be enough to predict the rudder forces reliably; A more advanced modeling of the response to this inflow is also needed, one that accounts for the span-wise inflow variations. 
-%\end{itemize}
-
-
-%_________________________________________________________
-%Move 3: Commenting on key results (making claims, explaining the results,
-%comparing the new work with previous studies, offering
-%alternative explanations) (oblig.)
-
-%_________________________________________________________
-%Move 4: Stating the limitations of the study
-
+The simulation model in this paper were not equipped with a propeller model, instead measured thrust was used during the simulations. This needs to be added to the models in order to have self containing models that can run new simulations. 
 %_________________________________________________________
 %Move 5: Making recommendations for future implementation and/or for
 %future research

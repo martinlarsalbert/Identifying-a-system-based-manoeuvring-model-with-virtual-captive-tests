@@ -157,27 +157,27 @@
 %textheight in inches: \printinunitsof{in}\prntlen{\textheight}
 %% main text
 %\newpage
-\section*{Nomenclature}
-\label{sec:introduction}
-\begin{table}[h]
-    \centering
-    %\footnotesize
-    \scriptsize
-    %\caption{Semi-empirical rudder parameters (SI units) in model scale.}
-    \label{tab:other_parameters}
-    \pgfplotstabletypeset[col sep=comma, column type=r,
-    columns/LaTeX/.style={column type=r,string type,column name=~},
-    columns/LaTeX1/.style={column type=r,string type, column name=~},
-    columns/LaTeX2/.style={column type=r,string type, column name=~},
-    %columns/LaTeX3/.style={column type=l,string type, column name=~},
-    columns/Description/.style={column type=p{3.3cm},string type,column name=~},
-    columns/Description1/.style={column type=p{3.3cm},string type, column name=~},
-    columns/Description2/.style={column type=p{3.3cm},string type, column name=~},
-    %columns/Description3/.style={column type=l,string type, column name=~},
-    %every head row/.style={before row=\hline,after row=\hline},
-    %every last row/.style={after row=\hline}
-    ]{tables/mathematical_model_kinetics.nomenclature.csv}
-\end{table}
+%%\section*{Nomenclature}
+%%\label{sec:introduction}
+%%\begin{table}[h]
+%%    \centering
+%%    %\footnotesize
+%%    \scriptsize
+%%    %\caption{Semi-empirical rudder parameters (SI units) in model scale.}
+%%    \label{tab:other_parameters}
+%%    \pgfplotstabletypeset[col sep=comma, column type=r,
+%%    columns/LaTeX/.style={column type=r,string type,column name=~},
+%%    columns/LaTeX1/.style={column type=r,string type, column name=~},
+%%    columns/LaTeX2/.style={column type=r,string type, column name=~},
+%%    %columns/LaTeX3/.style={column type=l,string type, column name=~},
+%%    columns/Description/.style={column type=p{3.3cm},string type,column name=~},
+%%    columns/Description1/.style={column type=p{3.3cm},string type, column name=~},
+%%    columns/Description2/.style={column type=p{3.3cm},string type, column name=~},
+%%    %columns/Description3/.style={column type=l,string type, column name=~},
+%%    %every head row/.style={before row=\hline,after row=\hline},
+%%    %every last row/.style={after row=\hline}
+%%    ]{tables/mathematical_model_kinetics.nomenclature.csv}
+%%\end{table}
 \FloatBarrier
 
 \section*{Abbreviations}
@@ -232,12 +232,14 @@
 \input{model_rudder}
 \subsection{Propeller model}
 \input{model_propeller}
+\FloatBarrier
 
 %%%%%%%%%%%%%%%
 %% METHODOLOGY
 %%%%%%%%%%%%%%%
 \section{Methodology}
 \subsection{Test cases}
+\label{sec:test_cases}
 \input{test_cases}
 \FloatBarrier
 %\subsection{VCT matrix for wPCC}
@@ -294,8 +296,8 @@
 %%%%%%%%%%%%%%%
 %% DISCUSSION
 %%%%%%%%%%%%%%%
-\section{Discussion}
-\label{sec:discussion}
+%\section{Discussion}
+%\label{sec:discussion}
 
 %%%%%%%%%%%%%%%
 %% CONCLUSIONS
@@ -311,7 +313,9 @@
 %% The Appendices part is started with the command \appendix;
 %% appendix sections are then done as normal sections
 \appendix
-
+\section{Identified coefficients}
+\label{sec:coefficients}
+\input{results_coefficients}
 
 \FloatBarrier
 %% If you have bibdatabase file and want bibtex to generate the

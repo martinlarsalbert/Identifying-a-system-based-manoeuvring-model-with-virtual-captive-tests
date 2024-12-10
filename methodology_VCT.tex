@@ -18,7 +18,7 @@ VCT calculations are conducted by solving a set of static flow calculations with
         \label{fig:phase_plots}
 \end{figure}
 
-The total forces from the VCT $X_{VCT}$, $Y_{VCT}$, and $N_{VCT}$ are recalculated with \autoref{eq:X_D} -- \autoref{eq:N_D}, to obtain the damping forces.
+The hull forces from the VCT $X_{VCT}$, $Y_{VCT}$, and $N_{VCT}$ are recalculated with \autoref{eq:X_D} -- \autoref{eq:N_D}, to obtain the damping forces.
 \begin{equation}
     \label{eq:X_D}
     X_{D} = X_{VCT} + Y_{\dot{r}} r^{2} + Y_{\dot{v}} r v
@@ -32,6 +32,21 @@ The total forces from the VCT $X_{VCT}$, $Y_{VCT}$, and $N_{VCT}$ are recalculat
     N_{D} = N_{VCT} + X_{\dot{u}} u v - Y_{\dot{r}} r u - Y_{\dot{v}} u v
 \end{equation}
 The mass $m$ has disappeared from \autoref{eq:F_expanded} to arrive at these expressions, because the ship is not moving in ShipFlow, instead the water is having an either oblique or circular inflow \citep{roychoudhuryCFDSimulationsSteady2017}.
+The hull forces are calculated by subtracting the rudder and propeller contributions from the total forces (\autoref{eq:X_H_VCT} -- \autoref{eq:N_H_VCT}).
+\begin{equation}
+    \label{eq:X_H_VCT}
+    X_H = X_D - X_R - X_P
+\end{equation}
+\begin{equation}
+    \label{eq:Y_H_VCT}
+    Y_H = Y_D - Y_R
+\end{equation}
+\begin{equation}
+    \label{eq:N_H_VCT}
+    N_H = N_D - N_R
+\end{equation}
+These forces are used together with the hull force model (\autoref{eq:X_H} -- \autoref{eq:N_H}) to define a linear regression problem that is solved with the ordinary least square (OLS) method. 
+
 % wPCC
 \begin{table}[h]
     \centering

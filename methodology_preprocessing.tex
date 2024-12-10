@@ -17,3 +17,5 @@ The roll degree of freedom is not included in the 3 DOF system based model. But 
         \caption{Sway motion transformed to roll center during tests with wPCC.}
         \label{fig:roll_center}
 \end{figure}
+
+The raw data from the experiments does not contain any measurements of velocity and acceleration during the tests, only the position and heading of the ship. The velocity and acceleration was therefore estimated by an extended Kalman filter (EKF), with the manoeuvring model as the predictor as described in \citet{alexanderssonSystemIdentificationVessel2022}.
