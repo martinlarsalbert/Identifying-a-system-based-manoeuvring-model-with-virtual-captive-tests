@@ -271,12 +271,14 @@
            sodipodi:nodetypes="cc" /><text
            xml:space="preserve"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.60366px;line-height:1.5;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.471237;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
-           x="-193.36865"
-           y="98.825645"
+           x="-181.24113"
+           y="104.32359"
            id="text13"
            transform="rotate(-90)"><tspan
              sodipodi:role="line"
-             id="tspan15">$y_0$</tspan></text></g></g><g
+             id="tspan15"
+             x="-181.24113"
+             y="104.32359">$y_0$</tspan></text></g></g><g
        id="g12"
        inkscape:label="V"
        style="display:inline;stroke-width:0.471237;stroke-dasharray:none"
