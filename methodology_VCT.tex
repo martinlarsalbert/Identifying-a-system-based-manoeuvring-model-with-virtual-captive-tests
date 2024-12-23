@@ -1,4 +1,46 @@
-VCT calculations are conducted by solving a set of static flow calculations with CFD. The VCT test matrices (\autoref{tab:VCT_wPCC}, \autoref{tab:VCT_optiwise}) are selected to have a good coverage of the states that the ship will have during the maneuver. How the combinations of drift angle and yaw rate have been selected is shown in \autoref{fig:phase_plots}, for the wPCC and Optiwise. 
+\noindent In this study, it is proposed to conduct VCTs by solving a set of static flow calculations with CFD to calculate the hydrodynamic forces applied on the ship hull. To have good coverage of the states that the ship will have during the maneuvering, the VCT test matrices listed in (\autoref{tab:VCT_wPCC}, \autoref{tab:VCT_optiwise}) are proposed in this study. In addition, for the wPCC and Optiwise specially designed with WAPS, the combinations of drift angle and yaw rate are also proposed as in \autoref{fig:phase_plots}. 
+
+
+From the series of the VCTs, the hull forces  $X_{VCT}$, $Y_{VCT}$, and $N_{VCT}$ can be estimated. They are then used to recalculate the damping forces as follows,
+\begin{equation}
+    \label{eq:X_D}
+    \left.\begin{aligned}
+    X_{D} = X_{VCT} + Y_{\dot{r}} r^{2} + Y_{\dot{v}} r v \\
+    Y_{D} =  Y_{VCT} - X_{\dot{u}} r u\\
+    N_{D} = N_{VCT} + X_{\dot{u}} u v - Y_{\dot{r}} r u - Y_{\dot{v}} u v
+    \end{aligned}\right\}
+\end{equation}
+% \begin{equation}
+%     \label{eq:Y_D}
+%     Y_{D} = - X_{\dot{u}} r u + Y_{VCT}
+% \end{equation}
+% \begin{equation}
+%     \label{eq:N_D}
+%     N_{D} = N_{VCT} + X_{\dot{u}} u v - Y_{\dot{r}} r u - Y_{\dot{v}} u v
+% \end{equation}
+
+It should be noted that the mass $m$ has disappeared from Eq.(\ref{eq:F_expanded}) to derive these expressions, because the ship is not moving in the VCTs conducted by the Shipflow Motions, instead the water has either oblique or circular inflow \citep{roychoudhuryCFDSimulationsSteady2017}.
+Thereafter, the hull forces are calculated by subtracting the rudder and propeller forces from the total forces as,
+\begin{equation}
+    \label{eq:X_H_VCT}
+    \left.\begin{aligned}
+    X_H = X_D - X_R - X_P \\
+    Y_H = Y_D - Y_R \\
+    N_H = N_D - N_R
+    \end{aligned}\right\}
+\end{equation}
+% \begin{equation}
+%     \label{eq:Y_H_VCT}
+%     Y_H = Y_D - Y_R
+% \end{equation}
+% \begin{equation}
+%     \label{eq:N_H_VCT}
+%     N_H = N_D - N_R
+% \end{equation}
+These forces are used together with the hydrodynamic forces applied on the ship hull as in (\autoref{eq:XYN_H}, \autoref{eq:XYN_H_prime}) to define a linear regression problem that is solved with the ordinary least square (OLS) method.
+
+\textbf{\textit{State VCT:}} in addition, some VCT calculations were also conducted for a selection of the states $\pmb{\bm{\upsilon}}$ and inputs $\mathbf{u}$ encountered by the ship during the zigzag tests to check if the fitted maneuvering models predict the same forces as the VCT analysis.
+
 \begin{figure}[h]
      \centering
      \begin{subfigure}[b]{0.49\textwidth}
@@ -18,40 +60,11 @@ VCT calculations are conducted by solving a set of static flow calculations with
         \label{fig:phase_plots}
 \end{figure}
 
-The forces from the VCT $X_{VCT}$, $Y_{VCT}$, and $N_{VCT}$ are recalculated with \autoref{eq:X_D} -- \autoref{eq:N_D}, to obtain the damping forces.
-\begin{equation}
-    \label{eq:X_D}
-    X_{D} = X_{VCT} + Y_{\dot{r}} r^{2} + Y_{\dot{v}} r v
-\end{equation}
-\begin{equation}
-    \label{eq:Y_D}
-    Y_{D} = - X_{\dot{u}} r u + Y_{VCT}
-\end{equation}
-\begin{equation}
-    \label{eq:N_D}
-    N_{D} = N_{VCT} + X_{\dot{u}} u v - Y_{\dot{r}} r u - Y_{\dot{v}} u v
-\end{equation}
-The mass $m$ has disappeared from \autoref{eq:F_expanded} to arrive at these expressions, because the ship is not moving in ShipFlow, instead the water is having an either oblique or circular inflow \citep{roychoudhuryCFDSimulationsSteady2017}.
-The hull forces are calculated by subtracting the rudder and propeller contributions from the total forces (\autoref{eq:X_H_VCT} -- \autoref{eq:N_H_VCT}).
-\begin{equation}
-    \label{eq:X_H_VCT}
-    X_H = X_D - X_R - X_P
-\end{equation}
-\begin{equation}
-    \label{eq:Y_H_VCT}
-    Y_H = Y_D - Y_R
-\end{equation}
-\begin{equation}
-    \label{eq:N_H_VCT}
-    N_H = N_D - N_R
-\end{equation}
-These forces are used together with the hull force model (\autoref{eq:X_H} -- \autoref{eq:N_H}) to define a linear regression problem that is solved with the ordinary least square (OLS) method. 
-
 % wPCC
 \begin{table}[h]
     \centering
     \small
-    \caption{VCT variations for wPCC.}
+    \caption{Various test scenarios for VCTs of the wPCC.}
     \label{tab:VCT_wPCC}
     \pgfplotstabletypeset[col sep=comma, column type=c, style=string type,
         columns/Test type/.style={column type=l,string type},
@@ -79,7 +92,7 @@ These forces are used together with the hull force model (\autoref{eq:X_H} -- \a
 \begin{table}[h]
     \centering
     \small
-    \caption{VCT variations for Optiwise.}
+    \caption{Various test scenarios for VCTs of the Optiwise.}
     \label{tab:VCT_optiwise}
     \pgfplotstabletypeset[col sep=comma, column type=c, style=string type,
         columns/Test type/.style={column type=l,string type},

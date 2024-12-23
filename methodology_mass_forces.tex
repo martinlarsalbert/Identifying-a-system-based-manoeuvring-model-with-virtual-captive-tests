@@ -1,25 +1,36 @@
-The mass properties of the ship models, including the added masses, need to be determined in order to conduct simulations or inverse dynamics. The rigid body mass and mass inertia were determined with swing tests in air before conducting the FRMTs at RISE MDL. The vertical centre of gravity was determined with inclining experiments with the scale models in the MDL basin.
+\noindent The mass properties of the ship models, including the added masses, need to be determined in order to conduct simulations or inverse dynamics. The rigid body mass and mass inertia were determined with swing tests in air before conducting the FRMTs at RISE MDL (Maritime Dynamics Laboratory). The vertical centre of gravity was determined with inclining experiments with the scale models in the MDL basin.
 
-The yaw added mass $N_{\dot{r}}$ was determined with the Fourier series method \citep{sakamotoURANSSimulationsStatic2012} applied on a pure yaw test conducted in a a fully nonlinear potential flow (FNPF) panel method in ShipFlow Motions (Motions) \citep{kjellbergFullyNonlinearUnsteady2013}.
-During the pure yaw test the heading $\Psi$ was varied according to \autoref{eq:pure_yaw_psi} so that the yaw rate $r$ and yaw acceleration $\dot{r}$ were varied according to \autoref{eq:pure_yaw_r}, and \autoref{eq:pure_yaw_r1d}.
+In this study, the yaw added mass $N_{\dot{r}}$ is proposed to be determined with the Fourier series method \citep{sakamotoURANSSimulationsStatic2012} applied on a pure yaw test conducted in a a fully nonlinear potential flow (FNPF) panel method in ShipFlow Motions \citep{kjellbergFullyNonlinearUnsteady2013}.
+
+The ShipFlow Motions uses a solver of fully nonlinear boundary element method for computing ship motions with better accuracy than traditional potential flow methods while faster than the available CFD (computational fluid dynamics) methods.
+
+
+During the pure yaw test the heading $\Psi$ was varied  so that the yaw rate $r$ and yaw acceleration $\dot{r}$ were varied as below,
+
 \begin{equation}
-    \Psi = - \Psi_{max} \cos{\left(t w \right)}
+    \left.\begin{aligned}
+    \Psi = - \Psi_{max} \cos{\left(t w \right)} \\
+    r = \Psi_{max} w \sin{\left(t w \right)} \\
+    \dot{r} = \Psi_{max} w^{2} \cos{\left(t w \right)}
+    \end{aligned}\right\}.
     \label{eq:pure_yaw_psi}
 \end{equation}
-\begin{equation}
-    r = \Psi_{max} w \sin{\left(t w \right)}
-    \label{eq:pure_yaw_r}
-\end{equation}
-\begin{equation}
-    \dot{r} = \Psi_{max} w^{2} \cos{\left(t w \right)}
-    \label{eq:pure_yaw_r1d}
-\end{equation}
-The pure yaw calculations in Motions were conducted without propeller and rudder so that $N_D=N_H$ and the moment equilibrium with the yawing moment from the pressure integration in Motions $N_M$ could be expressed with \autoref{eq:MOTIONS_N}, where the yaw added mass $N_{\dot{r}}$ was the coefficient of interest. 
+% \begin{equation}
+%     r = \Psi_{max} w \sin{\left(t w \right)}
+%     \label{eq:pure_yaw_r}
+% \end{equation}
+% \begin{equation}
+%     \dot{r} = \Psi_{max} w^{2} \cos{\left(t w \right)}
+%     \label{eq:pure_yaw_r1d}
+% \end{equation}
+
+The pure yaw calculations in Shipflow Motions were conducted without propeller and rudder so that $N_D=N_H$ and the moment equilibrium with the yawing moment from the pressure integration in Shipflow Motions $N_M$ could be expressed as, 
 \begin{equation}
     \input{equations/methodology_pure_yaw_no_FFT.MOTIONS_N.tex}
     \label{eq:MOTIONS_N}
 \end{equation}
-The time series for the yawing moment during the pure yaw test could thus be expressed by inserting \autoref{eq:pure_yaw_psi} -- \autoref{eq:pure_yaw_r1d} into \autoref{eq:MOTIONS_N} as shown in \autoref{eq:MOTIONS_N_expanded}.
+where the yaw added mass $N_{\dot{r}}$ was the coefficient of interest. 
+The time series for the yawing moment during the pure yaw test could thus be expressed by inserting \autoref{eq:pure_yaw_psi}  into \autoref{eq:MOTIONS_N} as shown below,
 \begin{equation}
     %\input{equations/methodology_pure_yaw_no_FFT.MOTIONS_N_expanded}
     \begin{align}    
@@ -28,19 +39,22 @@ The time series for the yawing moment during the pure yaw test could thus be exp
     \end{align}
     \label{eq:MOTIONS_N_expanded}
 \end{equation}
-\autoref{eq:MOTIONS_N_expanded} can instead be expressed as a Fourier series with three components as shown in \autoref{eq:fourier} where $N_{\dot{r}}$ can be calculated from the first cosine coefficient (\autoref{eq:N_r1d}).
+which can instead be expressed as a Fourier series with three components as shown below,
 \begin{equation}
     N_M = N_0 + \sum_{n=1}^3a_n \cos(n \omega t) + \sum_{n=1}^3b_n \sin(n \omega t) 
     \label{eq:fourier}
 \end{equation}
+in which $N_{\dot{r}}$ can be calculated from the first cosine coefficient viz.,
+
 \begin{equation}
     N_{\dot{r}} = \frac{a_1}{\Psi_{max} w^{2}}
     \label{eq:N_r1d}
 \end{equation}
-An example of the fitted Fourier series is shown in \autoref{fig:fourier}. The sway added mass $Y_{\dot{v}}$ was determined in a similar way, but instead by conducting a pure sway test. The coupled added masses $N_{\dot{v}}$, and $Y_{\dot{r}}$ were determined with strip theory calculations using Franks close fit method.
-\begin{figure}[h]
-    \centering
-    \includesvg{figures/methodology_pure_yaw_no_FFT.reconstruction.svg}
+
+An example of the fitted Fourier series is shown in \autoref{fig:fourier}. The sway added mass $Y_{\dot{v}}$ was determined in a similar way, but instead by conducting a pure sway test. The coupled added masses $N_{\dot{v}}$, and $Y_{\dot{r}}$ were determined with strip theory calculations using Franks close fit method. 
+
+\begin{figure}[h!]
+    \centering   \includesvg[width = 3in]{figures/methodology_pure_yaw_no_FFT.reconstruction.svg}
     \caption{Fourier series fit to the pure yaw Motions results to determine the yaw added mass for wPCC.}
     \label{fig:fourier}
 \end{figure}

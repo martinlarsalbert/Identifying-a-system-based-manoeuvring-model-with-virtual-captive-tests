@@ -19,7 +19,7 @@
 %% with harvard style bibliographic references
 
 %\documentclass[preprint,12pt,authoryear]{elsarticle}
-\documentclass[preprint,12pt,authoryear]{elsarticle}
+\documentclass[preprint,11pt,authoryear]{elsarticle}
 
 %% Use the option review to obtain double line spacing
 %%\documentclass[authoryear,preprint,review,12pt]{elsarticle}
@@ -38,7 +38,6 @@
 %% please give \usepackage{epsfig}
 
 %% The amssymb package provides various useful mathematical symbols
-\usepackage{amssymb}
 %% The amsthm package provides extended theorem environments
 %% \usepackage{amsthm}
 
@@ -46,16 +45,27 @@
 %% \begin{linenumbers}, end it with \end{linenumbers}. Or switch it on
 %% for the whole article with \linenumbers.
 %% \usepackage{lineno}
+\usepackage{lipsum}
+
+% ADD THE FOLLOWING COUPLE LINES INTO YOUR PREAMBLE
+\let\OLDthebibliography\thebibliography
+\renewcommand\thebibliography[1]{
+  \OLDthebibliography{#1}
+  \setlength{\parskip}{0pt}
+  \setlength{\itemsep}{0pt plus 0.3ex}
+}
+
+\setlength{\bibsep}{0pt plus 0.3ex}
 \usepackage{amsmath}
+\usepackage[a4paper, total={6in, 9in}]{geometry}
 \input{extra_packages.tex}
-\journal{International Journal of Naval Architecture and Ocean Engineering}
+%\journal{International Journal of Naval Architecture and Ocean Engineering}
 
 \begin{document}
 
 \begin{frontmatter}
 
     %% Title, authors and addresses
-
     %% use the tnoteref command within \title for footnotes;
     %% use the tnotetext command for theassociated footnote;
     %% use the fnref command within \author or \affiliation for footnotes;
@@ -109,15 +119,15 @@
     \author[2]{Martin Kjellberg}
 
 
-    \affiliation[1]{organization={Dept. of Mechanics and Maritime Sciences, Division of Marine Technology, Chalmers University of Technology},%Department and Organization
-        addressline={Hörsalsvägen 7A},
+    \affiliation[1]{organization={Department of Mechanics and Maritime Sciences, Chalmers University of Technology},%Department and Organization
+    %    addressline={Hörsalsvägen 7A},
         city={Gothenburg},
         postcode={41296},
         country={Sweden}}
 
 
     \affiliation[2]{organization={Research Institutes of Sweden (RISE), SSPA Maritime Center},%Department and Organization
-        addressline={Chalmers tvärgata 10},
+    %    addressline={Chalmers tvärgata 10},
         city={Gothenburg},
         postcode={41296},
         country={Sweden}}
@@ -188,20 +198,15 @@
     \scriptsize
     %\caption{Semi-empirical rudder parameters (SI units) in model scale.}
     \label{tab:abbreviations}
-    \begin{tabular}{l l}
+    \begin{tabular}{l l l l}
 
-    CFD & Computational fluid dynamics \\
-    CMT & Captive model tests \\
-    DOF & Degree of freedom \\
-    FRMT & Free running model tests \\
-    ID & Inverse dynamics \\
-    MMG & Manoeuvring modeling group \\
-    OLS & Ordinary least-square \\
-    RHI & Rudder hull interaction \\
-    RISE & Research institutes of Sweden \\
-    VCT & Virtual captive tests \\
-    WASP & wind-assisted ship propulsion \\
-    wPCC & Wind powered car carrier test case\\
+    CFD & Computational fluid dynamics & CMT & Captive model tests \\
+    
+    DOF & Degree of freedom &  FRMT & Free running model tests \\
+    ID & Inverse dynamics &  MMG & Manoeuvring modeling group \\
+    OLS & Ordinary least-square &  RHI & Rudder hull interaction \\
+    RISE & Research institute of Sweden &  VCT & Virtual captive tests \\
+    WASP & wind-assisted ship propulsion &  wPCC & Wind powered car carrier test case\\
     \end{tabular}
         
 \end{table}
@@ -217,72 +222,85 @@
 %%%%%%%%%%%%%%%
 %% MODEL
 %%%%%%%%%%%%%%%
-\section{Model}
-\input{model}
+\section{Maneuvering simulation model}
 \input{fossen}
+%\input{model}
 \input{MMG_general}
-\subsection{Prime system}
+\subsection{Prime system in maneuvering equations}
 \label{sec:prime_system}
 \input{prime_system}
 \input{prime_system_table}
 \FloatBarrier
-\subsection{Hull model}
+\subsection{Hydrodynamic forces on ship hull}
 \input{model_hull}
-\subsection{Rudder models}
+\subsection{Models for rudder forces}
 \input{model_rudder}
-\subsection{Propeller model}
+\subsection{Models for propeller forces}
 \input{model_propeller}
 \FloatBarrier
+
+
+\section{Experimental test models for verification and validation}
+\label{sec:test_cases}
+\input{test_cases}
+\FloatBarrier
+\subsection{Preprocessing experimental data}
+\input{methodology_preprocessing}
+\FloatBarrier
+\subsection{Moment of inertia of the models}
+\input{methodology_mass_forces}
+
 
 %%%%%%%%%%%%%%%
 %% METHODOLOGY
 %%%%%%%%%%%%%%%
-\section{Methodology}
-\subsection{Test cases}
-\label{sec:test_cases}
-\input{test_cases}
-\FloatBarrier
+\section{Proposed procedure for other parameter identification}
+\input{derivatives}
 %\subsection{VCT matrix for wPCC}
 %\input{methodology_VCT_wPCC}
 \subsection{Inverse dynamics analysis}
 \input{methodology_ID}
-\subsection{Inertia}
-\input{methodology_mass_forces}
-\subsection{Hydrodynamic forces from VCT}
+
+\subsection{Hydrodynamic forces from VCTs}
 \label{sec:methodology_VCT}
 \input{methodology_VCT}
 \FloatBarrier
-\subsection{State VCT}
-\input{methodology_state_VCT}
-\subsection{Preprocessing experimental data}
-\input{methodology_preprocessing}
-\FloatBarrier
+% \subsection{State VCT}
+% \input{methodology_state_VCT}
+
 
 %%%%%%%%%%%%%%%
-%% RESULTS
+%% RESULTS for wpcc
 %%%%%%%%%%%%%%%
-\section{Results}
-\label{sec:results}
-%\input{result}
+\section{Results of validation analysis for the wPCC}
+\label{sec:results_wpcc}
+\input{result_procedure}
 \FloatBarrier
-\subsection{VCT wPCC}
+\subsection{Comparison of hydrodynamic forces}
 \input{result_wPCC_VCT}
-\FloatBarrier
-
-\subsection{VCT Optiwise}
-\input{result_optiwise_VCT}
 \FloatBarrier
 
 \subsection{Inverse dynamics analysis wPCC}
 \input{result_wPCC_ID}
 \FloatBarrier
+\subsection{Closed loop simulations wPCC}
+\input{result_wPCC_closed_loop}
+\FloatBarrier
+
+
+
+%%%%%%%%%%%%%%%
+%% RESULTS for optiwise
+%%%%%%%%%%%%%%%
+\section{Analysis and results of Optiwise}
+\label{sec:results_optiwise}
+\input{result_optiwise}
+\FloatBarrier
+\subsection{Hydrodynamic forces between proposed method and VCT}
+\input{result_optiwise_VCT}
 
 \subsection{Inverse dynamics analysis Optiwise}
 \input{result_optiwise_ID}
-\FloatBarrier
-
-\subsection{Closed loop simulations wPCC}
-\input{result_wPCC_closed_loop}
 \FloatBarrier
 
 \subsection{Closed loop simulations Optiwise}
@@ -293,11 +311,7 @@
 %\input{result_optiwise_rudder_velocities}
 %\FloatBarrier
 
-%%%%%%%%%%%%%%%
-%% DISCUSSION
-%%%%%%%%%%%%%%%
-%\section{Discussion}
-%\label{sec:discussion}
+
 
 %%%%%%%%%%%%%%%
 %% CONCLUSIONS
@@ -307,8 +321,12 @@
 \input{conclusions}
 \FloatBarrier
 
-\section{Acknowledgements}
+\section*{Acknowledgments}
 \input{acknowledgements}
+
+\bibliographystyle{elsarticle-harv}
+%\bibliography{Paper_3_semiempirical_rudder.bib}
+\bibliography{Paper_5.bib}
 
 %% The Appendices part is started with the command \appendix;
 %% appendix sections are then done as normal sections
@@ -316,15 +334,10 @@
 \section{Identified coefficients}
 \label{sec:coefficients}
 \input{results_coefficients}
-
 \FloatBarrier
 %% If you have bibdatabase file and want bibtex to generate the
 %% bibitems, please use
 %%
-\pagebreak
-\bibliographystyle{elsarticle-harv}
-%\bibliography{Paper_3_semiempirical_rudder.bib}
-\bibliography{Paper_5.bib}
 
 \end{document}
 
