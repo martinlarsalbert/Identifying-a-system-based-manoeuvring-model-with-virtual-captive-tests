@@ -1,14 +1,18 @@
-Instead of using the the equation of motion (\autoref{eq:acc}) to predict the acceleration $\pmb{\bm{\dot{\upsilon}}}$, this equation can instead be inverted to describe the inverse dynamics of the ship as shown in \autoref{eq:ID_X}-\autoref{eq:ID_N}.
+\noindent Instead of using the equation of motion (\autoref{eq:eom}) to predict the acceleration $\pmb{\bm{\dot{\upsilon}}}$, this equation can instead be inverted to describe the inverse dynamics of the ship as below,
 \begin{equation}
     \label{eq:ID_X}
-    \input{equations/methodology_ID.X_D}
-\end{equation}
-\begin{equation}
-    \label{eq:ID_Y}
-    \input{equations/methodology_ID.Y_D}
-\end{equation}
-\begin{equation}
-    \label{eq:ID_N}
+    \left.\begin{aligned}
+    \input{equations/methodology_ID.X_D} \\
+    \input{equations/methodology_ID.Y_D} \\
     \input{equations/methodology_ID.N_D}
+    \end{aligned}\right\}
 \end{equation}
-These expressions are used to estimate the forces acting on the ship during the FRMTs, which is then compared to the model force predictions. This is a more informative way to assess the model, than to compare its simulations with the FRMTs results.
+% \begin{equation}
+%     \label{eq:ID_Y}
+%     \input{equations/methodology_ID.Y_D}
+% \end{equation}
+% \begin{equation}
+%     \label{eq:ID_N}
+%     \input{equations/methodology_ID.N_D}
+% \end{equation}
+which can be used to estimate the forces acting on the ship based on experimental data from the FRMTs. They can then be compared to the model force predictions. This is a more informative way to assess the model, than to compare its simulations with the FRMTs results.

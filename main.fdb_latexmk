@@ -1,0 +1,13 @@
+# Fdb version 3
+["pdflatex"] 1733235406 "/home/maa/dev/PHD/docs/paper5/main.tex" "main.pdf" "main" 1733235406
+  "/etc/texmf/web2c/texmf.cnf" 1705560274 475 c0e671620eb5563b2130f56340a5fde8 ""
+  "/home/maa/dev/PHD/docs/paper5/main.tex" 1733233348 10123 886b09d54544ac7574c3d19d9e66498d ""
+  "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
+  "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1710828550 1405649 7db21c9d3a9aab47632f1dd40222d249 ""
+  "elsarticle.cls" 0 -1 0 ""
+  "main.aux" 0 -1 0 ""
+  "main.tex" 1733233348 10123 886b09d54544ac7574c3d19d9e66498d ""
+  (generated)
+  "main.log"
+  "main.pdf"

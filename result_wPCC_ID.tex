@@ -1,8 +1,8 @@
-Forces predicted with the wPCC model equipped with the semi-empirical rudder model have been compared with inverse dynamics forces from the zigzag10/10 and zigzag20/20 tests as well as some state VCT calculations during the tests as shown in \autoref{fig:ID_wPCC_10} and \autoref{fig:ID_wPCC_20}. The model describes the underlying VCT data well, with reasonably good agreement with the state VCT, especially for the rudder yawing moment $N_R$. The inverse dynamics forces from the experiments were however quite different. This indicates that there could be an inherent error in the VCT data itself, which is thus inherited by the model. The good agreement between the rudder forces points towards an error in the hull forces, which could be connected with missing wave generation forces in the VCT data.  
+\noindent Forces predicted with the wPCC model equipped with the semi-empirical rudder model have been compared with inverse dynamics forces from the zigzag10/10 and zigzag20/20 tests as well as some state VCT calculations during the tests as shown in \autoref{fig:ID_wPCC_10} and \autoref{fig:ID_wPCC_20}.   
 %10/10
-\begin{figure}[h]
+\begin{figure}[h!]
      \centering
-     \includesvg{figures/results_wPCC_ID.zigzag 10_10.svg}
+     \includesvg[height = 3.8in]{figures/results_wPCC_ID.zigzag 10_10.svg}
      \caption{Forces wPCC Zigzag10/10 to port.}
      \label{fig:ID_wPCC_10}
 \end{figure}
@@ -29,3 +29,6 @@ Forces predicted with the wPCC model equipped with the semi-empirical rudder mod
 %        \caption{Comparison between forces during zigzag tests with wPCC estimated with inverse dynamics from the experiments and predictions with a model equipped with either a polynomial rudder or semi-empirical rudder model. Forces from VCT calculations of some interesting states have also been added.}
 %        \label{fig:ID_wPCC}
 %\end{figure}        
+
+
+The model describes the underlying VCT data well, with reasonably good agreement with the state VCT, especially for the rudder yawing moment $N_R$. The inverse dynamics forces from the experiments were however quite different. This indicates that there could be an inherent error in the VCT data itself, which is thus inherited by the model. The good agreement between the rudder forces points towards an error in the hull forces, which could be connected with missing wave generation forces in the VCT data.

@@ -1,15 +1,32 @@
-The hull forces are expressed with the following general polynomials, which are expressed in prime system units (see \autoref{sec:prime_system}). The perturbed surge velocity allows for the extra resistance term ${X_u}'$, so that the resistance curve does not need to be quadratic shape as in the MMG model.  
+\noindent Based on the above-mentioned prime system, the hydrodynamic forces acting on a ship's hull as in Eq.(\ref{eq:X_D}) can be described viz,
+
 \begin{equation}
-    \label{eq:X_H}
-    \input{equations/mathematical_model_kinetics.X_H}
+    \label{eq:XYN_H}
+    \left.\begin{aligned}
+    X_H & = 1/2\rho L^{2} U^{2} X_H^{'}  \\
+    Y_H & = 1/2\rho L^{2} U^{2} Y_H^{'}  \\
+    N_H & = 1/2\rho L^{3} U^{2} X_H^{'}
+    \end{aligned}\right\}
 \end{equation}
-%
+where the non-dimensional surge force $X_H^{'}$, lateral force $Y_H^{'}$ and yaw moment $N_H^{'}$ are normally modeled by the following general polynomials in terms of non-dimensional velocities $u^{'}, v^{'}$ and yaw rate $r'$ based on the MMG model, (\citep{yasukawaIntroductionMMGStandard2015}),
 \begin{equation}
-    \label{eq:Y_H}
-    \input{equations/mathematical_model_kinetics.Y_H}
-\end{equation}
-%
-\begin{equation}
-    \label{eq:N_H}
+    \label{eq:XYN_H_prime}
+    \left.\begin{aligned}
+    \input{equations/mathematical_model_kinetics.X_H} \\
+    \input{equations/mathematical_model_kinetics.Y_H} \\
     \input{equations/mathematical_model_kinetics.N_H}
+    \end{aligned}\right\}
 \end{equation}
+where the coefficients $X_0^{'}, X_{rr}^{'}, X_u^{'}, X_{vr}^{'}, X_{vv}^{'}, Y_{0}^{'}, Y_{rrr}^{'}, Y_{r}^{'}, Y_{vrr}^{'}, Y_{vvr}^{'}, Y_{vvv}^{'}, Y_{v}^{'}, N_{0}^{'}$, $N_{rrr}^{'}$, $N_{r}^{'}$, $N_{vrr}^{'}$, $N_{vvr}^{'}$, $N_{vvv}^{'}$, $N_{v}^{'}$ are referred as the hydrodynamic derivatives on ship maneuvering, and they represent the impact of different velocity components to the three hydrodynamic forces on the ship's hull. One important task for system identification of ship maneuvering in this study is to find those derivatives.
+
+In this study for ships equipped with WAPS of large impact from lateral drifting, the perturbed surge velocity is proposed to allow for the extra resistance term ${X_u}'$, so that the resistance curve does not need to be quadratic shape as in the MMG model.  
+%
+% \begin{equation}
+%     \label{eq:Y_H}
+%     \input{equations/mathematical_model_kinetics.Y_H}
+% \end{equation}
+% %
+% \begin{equation}
+%     \label{eq:N_H}
+%     \input{equations/mathematical_model_kinetics.N_H}
+% \end{equation}
