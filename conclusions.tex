@@ -2,24 +2,36 @@
 %Move 1: Background information (research purposes, theory,
 %methodology)
 %
-\noindent Maneuvering models were developed for two WAPS test cases with large rudders. The models were identified by conducting VCTs to get the hydrodynamic damping coefficients and by conducting FNPF pure yaw and pure sway tests to get the added masses. The identified force models were compared with inverse dynamics forces from zigzag tests, to identify possible weak spots within the models.  
+\noindent Maneuvering models were developed for two WAPS test cases with large rudders. The models were identified by conducting VCTs to obtain the hydrodynamic damping coefficients and by conducting pure yaw and pure sway simulations in the FNPF to obtain the added masses. The identified force models were compared with the inverse dynamics forces of the zigzag tests to identify possible weak spots within the models.  
+
 %%_________________________________________________________
 %%Move 2: Summarizing and reporting key results. (oblig.)
-The added masses from the FNPF pure yaw and pure sway tests produced inverse dynamics forces that agreed well with the force prediction models and the state VCTs for Optiwise, which suggests that this is an accurate way to determine the added masses.
-Two enhancements to the MMG rudder model were proposed which improved the fit to the VCT data and also gave a little bit better results in the closed loop simulations.
-The coupling terms between sway and yaw rate was found to be important for both wPCC and Optiwise.
+The identified wPCC model was shown to be well adapted to the VCT data, where the importance of the coupling terms was also shown in the combined drift and yaw rate cases.
+However, the FRMT inverse dynamics forces were quite different from the VCT data and the model predictions. From this it was concluded that there must be an inherent error in the VCT data for wPCC that was inherited by the identified hull force model.
 
-The method to use inverse dynamics in combination with the state VCTs was found to be a useful tool to test the identified models and see if errors origin from the model structure or were inherent in the VCT data.
-It was for instance shown that the state VCT did not agree well with the wPCC inverse dynamics forces, which indicates that there is something missing in the wPCC VCT data. This could for instance be the lack of wave generation or heeled cases in the VCT data, which might be too much of a simplification for the wPCC.
-For Optiwise on the other hand, which was run at much lower Froude number and little heel, the state VCT agreed much better with the inverse dynamics forces and better agreement was obtained in the closed loop simulations.
+The inherent error in the wPCC VCT data could originate from false assumptions about neglected wave generation and roll exclusion. Therefore, another test case, Optiwise, was investigated in which these assumptions were assumed to be more valid.
+
+It was shown that a model, with the rudder model replaced by the actual measured rudder forces, predicted total forces that were similar to the total forces from the inverse dynamics. Hence, it was concluded that for Optiwise the hull force prediction was correct.
+
+The newly proposed MMG quadratic rudder model was then shown to be identifiable from the VCT data to get good agreement, in fact even better than the original MMG rudder model, with the FRMT measured rudder forces and consequently also good agreement with the total forces. 
 %_________________________________________________________
 %Move 3: Commenting on key results (making claims, explaining the results,
 %comparing the new work with previous studies, offering
 %alternative explanations) (oblig.)
+For Optiwise it can be concluded that the VCT data contained correct damping forces during the maneuvers, which were well described by the chosen model structure, and also that the method used to determine added masses gave reasonable values. 
+
+This analysis of the wPCC and Optiwise test cases has shown that inverse dynamics together with state VCTs is an effective tool to identify and explain possible weak spots within the identified models.
+
+%It was shown that the proposed way to determine added masses with FNPF pure yaw and pure sway tests
+%
+%added masses from the FNPF pure yaw and pure sway tests produced inverse dynamics forces that agreed well with the force prediction models and the state VCTs for the Optiwise test case, which suggests that this is an accurate way to determine the added masses.
+%
+%Two enhancements to the MMG rudder model were proposed which improved the fit to the VCT data and also gave a little bit better results in the closed loop simulations.
+%The coupling terms between sway and yaw rate were important for both wPCC and Optiwise.
 
 %_________________________________________________________
 %Move 4: Stating the limitations of the study
-The simulation model in this paper were not equipped with a propeller prediction model, instead measured thrust was used during the simulations. This needs to be added to the models in order to have self containing models that can run new simulations. 
+It should also be mentioned that if completely new maneuvers are simulated, the models in this paper would need a propeller prediction model that would be self-containing.
 %_________________________________________________________
 %Move 5: Making recommendations for future implementation and/or for
 %future research
