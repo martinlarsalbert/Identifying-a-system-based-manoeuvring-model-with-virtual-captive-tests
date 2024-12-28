@@ -1,10 +1,21 @@
-Ships with wind-assisted propulsion systems (WAPS) should be equipped with large rudders to compensate for WAPS-induced drifting forces. The WAPS also significantly affects the effectiveness of mathematical models used to describe the ship's maneuvering characteristics. In this study, the Maneuvering Modeling Group (MMG) is chosen and various approaches are proposed to identify different parameters within the MMG model. First, the ship's hydrodynamic coefficients, such as mass, added mass, and center of gravity, are estimated from either model tests or hydrodynamic analysis. The hydrodynamic forces and drifting forces are proposed to be analyzed by virtual captive tests (VCT). The key part of identifying MMG models for ships with WAPS is to obtain accurate rudder forces. Various explicit semi-empirical formulas are proposed to approximate the rudder forces when experimental data on the rudder forces is not available. Based on the experimental tests with rudder forces measured, the quadratic semi-empirical models are found to perfectly describe such forces. Finally, the other parameters in the MMG model are estimated by the inverse dynamics based on the series of maneuvering tests. In this study, two ships designed with WAPS, i.e., wPCC and Optiwise, are used to validate the proposed method based on their experimental model tests. For the wPCC ship with double rudders, large discrepancies are observed between the close loop maneuvering prediction by the identified model and tests, due to the incapability of VCTs to model rudder forces, and asymmetric patterns of flows on the two rudders. When the measurement of rudder forces is available for the Optiwise ship, the MMG model identified by the proposed method can perfectly predict the ship’s maneuvering motions compared to the tests.
 % Move 1 - Background/introduction/situation
+Ships with wind-assisted propulsion systems (WAPS) should be equipped with large rudders to compensate for WAPS-induced drifting forces. The WAPS also significantly affects the effectiveness of mathematical models used to describe the ship's maneuvering characteristics.
 
 % Move 2 - Present research/purpose
+In this study, it is investigated whether a proposed modular manoeuvring model can be identified from virtual captive tests (VCT) to recreate the forces acting on WAPS ships during free-running model tests (FRMT) at motor mode. 
 
 % Move 3 - Methods/materials/subjects/procedures
+First, the hydrodynamic damping coefficients within the model are determined with linear regression of the VCT data. The added masses are then determined from pure yaw and pure sway simulations with a fully
+nonlinear potential flow (FNPF) panel method.
+
+Two ships designed for WAPS, i.e. wPCC and Optiwise, are used to validate the proposed method based on the inverse dynamics of their experimental model tests. The wPCC is equipped with a semi-empirical rudder that has been previously shown to work well for this twin-rudder ship. The Optiwise single rudder is modeled with a new quadratic version of the MMG rudder model, proposed in this paper. 
 
 % Move 4 - Results/findings
+Inverse dynamics analysis revealed that there could be an error in the wPCC VCT data due to false assumptions about wave generation and roll motion. The Optiwise test case, where these assumptions should be more valid, had much better agreement with the FRMT inverse dynamics. 
 
 % Move 5 - Discussion/conclusion/significance
+This paper has proposed a new version of the MMG model that produced accurate simulations when identified on correct VCT data. It was also shown from the two test cases that inverse dynamics analysis together with state VCTs is an efficient way to analyze the models.
+
+%    
+
+%For the wPCC ship with double rudders, large discrepancies were observed between the closed loop maneuvering predictions by the identified model and tests, due to the incapability of VCTs to model rudder forces, and asymmetric patterns of flows on the two rudders. When the measurement of rudder forces is available for the Optiwise ship, the MMG model identified by the proposed method can perfectly predict the ship’s maneuvering motions compared to the tests.
