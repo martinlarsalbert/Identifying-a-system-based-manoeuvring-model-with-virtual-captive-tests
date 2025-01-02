@@ -1,4 +1,4 @@
-\noindent A series of fast VCTs with test scenarios as listed in \autoref{tab:VCT_optiwise} were conducted with CFD in Shipflow. Rudder force predictions with the MMG original rudder model and the modified MMG quadratic model were compared to VCT data for the rudder angle variation as shown in \autoref{fig:rudder_angle_compare_optiwise}. The newly added initial inflow angle parameter $\gamma_0$ (see \autoref{eq:gamma_R2}) allows the MMG quadratic model to be better adapted to the VCT data. However, the difference between the models is less obvious when looking at the thrust variation tests in \autoref{fig:thrust_variation_optiwise}.
+\noindent A series of fast VCTs with test scenarios as listed in \autoref{tab:VCT_optiwise} were conducted with CFD in Shipflow. Rudder force predictions with the MMG original rudder model and the modified MMG quadratic model were compared to VCT data for the rudder angle variation as shown in \autoref{fig:rudder_angle_compare_optiwise}. The newly added initial inflow angle parameter $\gamma_0$ (see \autoref{eq:gamma_R2}) allows the MMG quadratic model to be better adapted to the VCT data. However, the difference between the models is less obvious when looking at the thrust variation tests in \autoref{fig:rudder_angle_compare_optiwise_all}.
 
 Furthermore, the results of the drift, circle tests and the circle and drift tests are used to validate the MMG model improved by this study (named the MMG quadratic) for the prediction of the rudder forces.
 The newly added quadratic relationship for the flow straightening coefficient $\gamma_R$ (\autoref{eq:gamma_R2}) in the MMG quadratic rudder model fits better to the VCT data than the original MMG rudder model, as shown in \autoref{fig:MMG_quadratic}.
@@ -123,7 +123,7 @@ Similar comparisons are shown for the drift angle tests in \autoref{fig:drift_an
     \label{fig:VCT_optiwise}
 \end{figure}
 
-It should also be noted that the coupling terms $Y_{vrr}$,$Y_{vvr}$,$N_{vrr}$, and $N_{vvr}$ play an important role in accurately modeling the forces due to drifting for different captive test scenarios. As shown in \autoref{fig:circle_drift_optiwise}, by considering those coupling terms, the sway forces and yaw moments obtained from the identified model give better results than no-coupling models for those circle and drift captive tests.
+It should also be noted that the coupling terms $Y_{vrr}$,$Y_{vvr}$,$N_{vrr}$, and $N_{vvr}$ play an important role in accurately modeling the forces. As shown in \autoref{fig:circle_drift_optiwise}, by considering those coupling terms, the sway forces and yaw moments obtained from the identified model give better results than no-coupling models for those circle and drift captive tests.
 
 \begin{figure}[ht]
     \centering

@@ -18,27 +18,6 @@ From the series of VCTs, the hull forces $X_{VCT}$, $Y_{VCT}$, and $N_{VCT}$ can
 %     N_{D} = N_{VCT} + X_{\dot{u}} u v - Y_{\dot{r}} r u - Y_{\dot{v}} u v
 % \end{equation}
 
-It should be noted that the mass $m$ has disappeared from Eq.(\ref{eq:F_expanded}) to derive these expressions, because the ship is not moving in the VCTs conducted by the Shipflow Motions; instead, the water has oblique or circular inflow \citep{roychoudhuryCFDSimulationsSteady2017}.
-Thereafter, the hull forces are calculated by subtracting the rudder and propeller forces from the total forces as,
-\begin{equation}
-    \label{eq:X_H_VCT}
-    \left.\begin{aligned}
-    X_H = X_D - X_R - X_P \\
-    Y_H = Y_D - Y_R \\
-    N_H = N_D - N_R
-    \end{aligned}\right\}
-\end{equation}
-% \begin{equation}
-%     \label{eq:Y_H_VCT}
-%     Y_H = Y_D - Y_R
-% \end{equation}
-% \begin{equation}
-%     \label{eq:N_H_VCT}
-%     N_H = N_D - N_R
-% \end{equation}
-These forces are used together with the hydrodynamic forces applied on the hull of the ship as in (\autoref{eq:XYN_H}, \autoref{eq:XYN_H_prime}) to define a linear regression problem that is solved with the ordinary least squares (OLS) method.
-
-\textbf{\textit{State VCT:}} in addition, some VCT calculations were also conducted for a selection of the states $\pmb{\bm{\upsilon}}$ and inputs $\mathbf{u}$ encountered by the ship during the zigzag tests to check if the fitted maneuvering models predict the same forces as the VCT.
 
 \begin{figure}[h]
      \centering
@@ -88,7 +67,7 @@ These forces are used together with the hydrodynamic forces applied on the hull 
 %\end{figure}
 
 % Optiwise
-\begin{table}[h]
+\begin{table}[H]
     \centering
     \small
     \caption{Various test scenarios for VCTs of the Optiwise.}
@@ -114,3 +93,28 @@ These forces are used together with the hydrodynamic forces applied on the hull 
 %    \caption{Phase plots of the Optiwise zigzag tests together with the coverage of the VCTs and extra state VCTs.}
 %    \label{fig:VCT_phase_plot_optiwise}
 %\end{figure}
+
+
+
+
+It should be noted that the mass $m$ has disappeared from Eq.(\ref{eq:F_expanded}) to derive these expressions, because the ship is not moving in the VCTs conducted by the Shipflow Motions; instead, the water has oblique or circular inflow \citep{roychoudhuryCFDSimulationsSteady2017}.
+Thereafter, the hull forces are calculated by subtracting the rudder and propeller forces from the total forces as,
+\begin{equation}
+    \label{eq:X_H_VCT}
+    \left.\begin{aligned}
+    X_H = X_D - X_R - X_P \\
+    Y_H = Y_D - Y_R \\
+    N_H = N_D - N_R
+    \end{aligned}\right\}
+\end{equation}
+% \begin{equation}
+%     \label{eq:Y_H_VCT}
+%     Y_H = Y_D - Y_R
+% \end{equation}
+% \begin{equation}
+%     \label{eq:N_H_VCT}
+%     N_H = N_D - N_R
+% \end{equation}
+These forces are used together with the hydrodynamic forces applied on the hull of the ship as in (\autoref{eq:XYN_H}, \autoref{eq:XYN_H_prime}) to define a linear regression problem that is solved with the ordinary least squares (OLS) method.
+
+\textbf{\textit{State VCT:}} in addition, some VCT calculations were also conducted for a selection of the states $\pmb{\bm{\upsilon}}$ and inputs $\mathbf{u}$ encountered by the ship during the zigzag tests to check if the fitted maneuvering models predict the same forces as the VCT.
