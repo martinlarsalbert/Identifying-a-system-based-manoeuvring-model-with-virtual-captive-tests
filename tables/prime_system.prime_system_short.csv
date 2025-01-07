@@ -2,7 +2,7 @@ Physical quantity,SI unit,Denominator
 length,m,$L$
 Linear velocity,m/s,$U$
 Angular velocity,rad/s,$U/L$
-Mass,kg,$1/2 \\rho L^{3} $
-Moment of inertia,kg\cdot m\textsuperscript{2},$ 1/2 \\rho L^{5}$
-Force,N,$1/2 \\rho L^{2} U^{2}$
-Moment,Nm,$1/2 \\rho L^{3} U^{2}$
+Mass,kg,$1/2 \rho L^{3} $
+Moment of inertia,kg\cdot m\textsuperscript{2},$ 1/2 \rho L^{5}$
+Force,N,$1/2 \rho L^{2} U^{2}$
+Moment,Nm,$1/2 \rho L^{3} U^{2}$
