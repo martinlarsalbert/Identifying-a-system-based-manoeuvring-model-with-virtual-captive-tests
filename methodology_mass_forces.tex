@@ -1,8 +1,8 @@
-\noindent The mass properties of the ship models, including the added masses, need to be determined in order to conduct simulations or inverse dynamics. The rigid body mass and mass inertia were determined with swing tests in air before the FRMTs were carried out at RISE MDL (Maritime Dynamics Laboratory). The vertical center of gravity was determined with inclining experiments with the scale models in the MDL basin.
+\noindent The mass properties of the ship models, including the added masses, need to be determined in order to conduct simulations or inverse dynamics. The rigid body mass and mass inertia were determined with swing tests in air before the FRMTs were carried out at RISE Maritime Dynamics Laboratory (MDL) in Gothenburg (Sweden). The vertical center of gravity was determined with inclining experiments with the scale models in the MDL basin.
 
 In this study, it is proposed to determine the added mass of the yaw $N_{\dot{r}}$ with the Fourier series method \citep{sakamotoURANSSimulationsStatic2012} applied to a pure yaw test carried out in a fully non-linear potential flow panel method (FNPF) in ShipFlow Motions \citep{kjellbergFullyNonlinearUnsteady2013}.
-The ShipFlow Motions uses a fully nonlinear boundary element method solver for computing ship motions with better accuracy than traditional potential flow methods while being faster than the available CFD (computational fluid dynamics) methods.
-During the pure yaw test the heading $\Psi$ was varied  so that the yaw rate $r$ and yaw acceleration $\dot{r}$ were varied as below,
+ShipFlow Motions uses a fully nonlinear boundary element method solver for computing ship motions with better accuracy than traditional potential flow methods while being faster than the available CFD (computational fluid dynamics) methods.
+During the pure yaw test the heading $\Psi$ was varied  so that the yaw rate $r$ and yaw acceleration $\dot{r}$ were varied as:
 \begin{equation}
     \left.\begin{aligned}
     \Psi = - \Psi_{max} \cos{\left(t w \right)} \\
@@ -19,13 +19,13 @@ During the pure yaw test the heading $\Psi$ was varied  so that the yaw rate $r$
 %     \dot{r} = \Psi_{max} w^{2} \cos{\left(t w \right)}
 %     \label{eq:pure_yaw_r1d}
 % \end{equation}
-The pure yaw calculations in Shipflow Motions were conducted without propeller and rudder so that $N_D=N_H$ and the moment equilibrium with the yawing moment from the pressure integration in Shipflow Motions $N_M$ could be expressed as, 
+The pure yaw calculations in Shipflow Motions were conducted without propeller and rudder so that $N_D=N_H$ and the moment equilibrium with the yawing moment from the pressure integration in Shipflow Motions $N_M$ could be expressed as: 
 \begin{equation}
     \input{equations/methodology_pure_yaw_no_FFT.MOTIONS_N.tex}
     \label{eq:MOTIONS_N}
 \end{equation}
 where the yaw added mass $N_{\dot{r}}$ was the coefficient of interest. 
-The time series for the yawing moment during the pure yaw test could thus be expressed by inserting \autoref{eq:pure_yaw_psi}  into \autoref{eq:MOTIONS_N} as shown below,
+The time series for the yawing moment during the pure yaw test could thus be expressed by inserting \autoref{eq:pure_yaw_psi}  into \autoref{eq:MOTIONS_N} as:
 \begin{equation}
     %\input{equations/methodology_pure_yaw_no_FFT.MOTIONS_N_expanded}
     \begin{align}    
@@ -34,12 +34,12 @@ The time series for the yawing moment during the pure yaw test could thus be exp
     \end{align}
     \label{eq:MOTIONS_N_expanded}
 \end{equation}
-which can instead be expressed as a Fourier series with three components as shown below,
+which can instead be expressed as a Fourier series with three components as:
 \begin{equation}
     N_M = N_0 + \sum_{n=1}^3a_n \cos(n \omega t) + \sum_{n=1}^3b_n \sin(n \omega t) 
     \label{eq:fourier}
 \end{equation}
-in which $N_{\dot{r}}$ can be calculated from the first cosine coefficient viz.,
+in which $N_{\dot{r}}$ can be calculated from the first cosine coefficient viz.:
 \begin{equation}
     N_{\dot{r}} = \frac{a_1}{\Psi_{max} w^{2}}
     \label{eq:N_r1d}

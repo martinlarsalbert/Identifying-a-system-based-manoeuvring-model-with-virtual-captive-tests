@@ -1,4 +1,4 @@
-\noindent In the MMG model introduced in \citet{yasukawaIntroductionMMGStandard2015}, by neglecting the rudder tangential force the effective rudder forces $X_R, Y_R$ and $N_R$ are described by,
+\noindent In the MMG model introduced in \citet{yasukawaIntroductionMMGStandard2015}, if the rudder tangential force is neglected, the effective rudder forces $X_R, Y_R$ and $N_R$ can be described as:
 \begin{equation}
    \label{eq:rudder}
   \left.\begin{aligned}
@@ -7,13 +7,13 @@
   N_R & = - (x_R + \alpha_H x_H) F_N \cos \delta
 \end{aligned}\right\}
 \end{equation}
-where $F_N$ denotes the hydrodynamic forces applied on the normal direction of the rudder, $\delta$ denotes the rudder angle, and $t_R$, $\alpha_H$, $x_R, x_H$ denote the coefficients describing hydrodynamic interaction between rudder and hull, while $x_R, x_H$ represent longitudinal locations of the additional lateral forces applied on rudder and ship hull, respectively. The semi-empirical models for these coefficients are described in detail in \citet{yasukawaIntroductionMMGStandard2015} and \citet{alexanderssonSystemIdentificationPhysicsinformed2024b}. The key component in estimating effective rudder forces in Eq.(\ref{eq:rudder}) is to obtain the normal force applied on rudder expressed by,
+where $F_N$ denotes the hydrodynamic forces applied on the normal direction of the rudder, $\delta$ denotes the rudder angle, and $t_R$, $\alpha_H$, $x_R, x_H$ denote the coefficients describing hydrodynamic interaction between rudder and hull, while $x_R, x_H$ represent longitudinal locations of the additional lateral forces applied on rudder and ship hull, respectively. The semi-empirical models for these coefficients are described in detail in \citet{yasukawaIntroductionMMGStandard2015} and \citet{alexanderssonSystemIdentificationPhysicsinformed2024b}. The key component in estimating effective rudder forces in Eq.(\ref{eq:rudder}) is to obtain the normal force applied on the rudder expressed by:
 \begin{equation}
     \label{eq:rudder_normal}
     F_N & = 1/2 \rho A_R U_R^{2} f_{\alpha} \sin \alpha_R
 \end{equation}
-where $A_R, f_\alpha$ denote rudder area and rudder lift gradient coefficient, respectively, and $\alpha_R$ is the angle of effective flow to the rudder, which has significant impact on the rudder force in Eq.(\ref{eq:rudder_normal}) due the asymmetric properties of flows caused by ship drifting.
-In this study, a new quadratic rudder model is proposed with two enhancements to the original MMG rudder model as in \citet{yasukawaIntroductionMMGStandard2015}. The first enhancement is to add the angle of initial inflow to rudder  $\gamma_0$ for the calculation of the angle of effective inflow acting to rudder $\alpha_R$,  
+where $A_R, f_\alpha$ denote the rudder area and the rudder lift gradient coefficient, respectively, and $\alpha_R$ is the angle of effective flow to the rudder, which has significant impact on the rudder force in Eq.(\ref{eq:rudder_normal}) due the asymmetric properties of flows caused by ship drifting.
+In this study, a new quadratic rudder model is proposed with two enhancements to the original MMG rudder model as in \citet{yasukawaIntroductionMMGStandard2015}. The first enhancement is to add the angle of initial inflow to rudder  $\gamma_0$ for the calculation of the angle of effective inflow acting to rudder $\alpha_R$:  
 \begin{equation}
     \label{eq:alpha_R2}
     %\input{equations/mathematical_model_kinetics.alpha_R_semiempirical}
@@ -21,7 +21,7 @@ In this study, a new quadratic rudder model is proposed with two enhancements to
 \end{equation}
 which allows the rudder model to produce a side force in the straight ahead condition, due to unsymmetrical flow from the propeller.
 
-The other enhancement is to allow for a quadratic relationship between the flow straightening coefficient $\gamma_R$ and the effective inflow angle $\beta_R$ by introducing two new coefficients $\gamma_{R2neg}$, and $\gamma_{R2pos}$ shown as following,  
+The other enhancement is to allow for a quadratic relationship between the flow straightening coefficient $\gamma_R$ and the effective inflow angle $\beta_R$ by introducing two new coefficients $\gamma_{R2neg}$, and $\gamma_{R2pos}$ as:  
 \begin{equation}
     \label{eq:gamma_R2}
     \input{equations/mathematical_model_kinetics.gamma_R_semiempirical}

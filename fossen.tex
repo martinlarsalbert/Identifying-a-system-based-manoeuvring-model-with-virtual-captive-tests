@@ -5,7 +5,8 @@
     \caption{Ship velocities and forces in the Earth-fixed and ship-fixed coordinate systems.}
     \label{fig:reference_frames}
 \end{figure}
-Forces and motions are expressed in three degrees of freedom, that is, surge $X$, sway $Y$, and yaw $N$. During a ship's maneuvering, since the forces do not depend on the position ($x_0,y_0$) or heading $\Psi$, the kinematics and motion equations of the ship can be expressed as a function of the velocity vector $\pmb{\bm{\upsilon}}$ as
+
+Forces and motions are expressed in three degrees of freedom, that is, surge $X$, sway $Y$, and yaw $N$. During a ship's maneuvering, since the forces do not depend on the position ($x_0,y_0$) or the heading $\Psi$, the kinematics and motion equations of the ship can be expressed as a function of the velocity vector $\pmb{\bm{\upsilon}}$ as:
 % \begin{equation}
 %     \label{eq:upsilon}
 %     %\input{equations/155.10_Fossen_model.upsilon}
@@ -23,7 +24,7 @@ where $\pmb{\bm{\dot{\upsilon}}}$ is the acceleration vector, $\mathbf{M}$ is th
 %     \label{eq:acc}
 %     \pmb{\bm{\dot{\upsilon}}} = \mathbf{M}^{-1}\mathbf{F}
 % \end{equation}
-The total forces can be divided into the Coriolis–centripetal matrix $\mathbf{C}$ and the damping force vector $\mathbf{D}$ \citep{fossenHandbookMarineCraft2011}, while the control forces from the rudder and propeller are included in the $\mathbf{D}$ matrix as follows,
+The total forces can be divided into the Coriolis–centripetal matrix $\mathbf{C}$ and the damping force vector $\mathbf{D}$ \citep{fossenHandbookMarineCraft2011}. The control forces from the rudder and propeller are included in the $\mathbf{D}$ matrix as:
 \begin{equation}
     \label{eq:C_expanded}
     \input{equations/155.10_Fossen_model.C_expanded}, \hspace{0.3cm}
@@ -33,7 +34,7 @@ The total forces can be divided into the Coriolis–centripetal matrix $\mathbf{
 %     \label{eq:D}
 %     \input{equations/155.10_Fossen_model.D}
 % \end{equation}
-where the added masses  $X_{\dot{u}},Y_{\dot{v}},Y_{\dot{r}},N_{\dot{v}},N_{\dot{r}} < 0$, then the total force vector $\mathbf{F}$ can now be expressed as:
+The added masses  $X_{\dot{u}},Y_{\dot{v}},Y_{\dot{r}},N_{\dot{v}},N_{\dot{r}} < 0$, then, the total force vector $\mathbf{F}$ can be expressed as:
 \begin{equation}
     \label{eq:F_expanded}
     %\input{equations/155.10_Fossen_model.F_expanded}
@@ -46,13 +47,13 @@ N \\
 =
 \left[\begin{matrix}X_{D} - Y_{\dot{r}} r^{2} + m r^{2} x_{G} + r v \left(- Y_{\dot{v}} + m\right)\\Y_{D} + r u \left(X_{\dot{u}} - m\right)\\N_{D} + r u \left(Y_{\dot{r}} - m x_{G}\right) + \underbrace{u v \left(- X_{\dot{u}} + Y_{\dot{v}}\right)}_{\text{Munk moment}} \end{matrix}\right]
 \end{equation}
-where $u v \left(- X_{\dot{u}} + Y_{\dot{v}}\right)$ in the yawing moment $N$ is the so called Munk moment \citep{fossenHandbookMarineCraft2011}; $r u \left(X_{\dot{u}} - m\right)$ in the sway force $Y$ has the apparent centrifugal force from added mass and rigid body mass with $X_{\dot{u}}<0$, so that both added mass and rigid body mass create the centrifugal force acting outward in the turn. Both the added mass and rigid body mass will thus act to starboard on a port turn.
+where $u v \left(- X_{\dot{u}} + Y_{\dot{v}}\right)$ in the yaw moment and $N$ is the so called Munk moment \citep{fossenHandbookMarineCraft2011}. The term $r u \left(X_{\dot{u}} - m\right)$ in the sway force $Y$ has the apparent centrifugal force from added mass and rigid body mass with $X_{\dot{u}}<0$, so that both added mass and rigid body mass create the centrifugal force acting outward in the turn. Both the added mass and rigid body mass will thus act to starboard on a port turn.
 % \begin{equation}
 %     \label{eq:upsilon1d}
 % \mathbf{F} = - \mathbf{C} \upsilon + \mathbf{D}
 % \end{equation}
 
-For the calculation of acceleration $\pmb{\bm{\dot{\upsilon}}}$ in \autoref{fig:reference_frames}, the mass matrix $\mathbf{M}$ and its inverse can be calculated according to \citet{fossenHandbookMarineCraft2011} as shown in, 
+For the calculation of the acceleration $\pmb{\bm{\dot{\upsilon}}}$ in \autoref{fig:reference_frames}, the mass matrix $\mathbf{M}$ and its inverse can be calculated according to \citet{fossenHandbookMarineCraft2011} as: 
 \begin{equation}
     \label{eq:M_expanded}
     \input{equations/155.10_Fossen_model.M_expanded},
