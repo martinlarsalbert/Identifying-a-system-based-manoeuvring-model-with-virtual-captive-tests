@@ -27,11 +27,7 @@ The pure yaw calculations in Shipflow Motions were conducted without propeller a
 where the yaw added mass $N_{\dot{r}}$ was the coefficient of interest. 
 The time series for the yawing moment during the pure yaw test could thus be expressed by inserting \autoref{eq:pure_yaw_psi}  into \autoref{eq:MOTIONS_N} as:
 \begin{equation}
-    %\input{equations/methodology_pure_yaw_no_FFT.MOTIONS_N_expanded}
-    \begin{align}    
-    N_{M} = N_{\dot{r}} \Psi_{max} w^{2} \cos{\left(t w \right)} + N_{rrr} \Psi_{max}^{3} w^{3} \sin^{3}{\left(t w \right)} + \\ 
-    N_{r} \Psi_{max} w \sin{\left(t w \right)} + Y_{\dot{r}} \Psi_{max} u w \sin{\left(t w \right)}
-    \end{align}
+    \input{equations/methodology_pure_yaw_no_FFT.MOTIONS_N_expanded}
     \label{eq:MOTIONS_N_expanded}
 \end{equation}
 which can instead be expressed as a Fourier series with three components as:
