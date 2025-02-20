@@ -5,9 +5,8 @@
     \caption{Ship velocities and forces in the Earth-fixed and ship-fixed coordinate systems.}
     \label{fig:reference_frames}
 \end{figure}
-
 Forces and motions are expressed in three degrees of freedom, that is, surge $X$, sway $Y$, and yaw $N$. 
-The kinematics and motion equations of the ship can be expressed as a function of the velocity vector $\pmb{\bm{\upsilon}}$ as shown in \autoref{eq:eom}, since the forces do not depend on position ($x_0,y_0$) or heading $\Psi$.
+The kinematics and motion equations of the ship can be expressed as a function of the velocity vector $\pmb{\upsilon}$ as shown in \autoref{eq:eom}, since the forces do not depend on position ($x_0,y_0$) or heading $\Psi$.
 % \begin{equation}
 %     \label{eq:upsilon}
 %     %\input{equations/155.10_Fossen_model.upsilon}
@@ -16,10 +15,10 @@ The kinematics and motion equations of the ship can be expressed as a function o
 % The equation of motion can thus be expressed as \autoref{eq:eom}
 \begin{equation}
     \label{eq:eom}
-    \mathbf{F} = \mathbf{M}  \pmb{\bm{\dot{\upsilon}}}, \hspace{1cm}
-    \pmb{\bm{\upsilon}} = \left[\begin{matrix}u\\v\\r\end{matrix}\right]
+    \mathbf{F} = \mathbf{M}  \pmb{\dot{\upsilon}}, \hspace{1cm}
+    \pmb{\upsilon} = \left[\begin{matrix}u\\v\\r\end{matrix}\right]
 \end{equation}
-where $\pmb{\bm{\dot{\upsilon}}}$ is the acceleration vector, $\mathbf{M}$ is the system inertia matrix and $\mathbf{F}$ is the total force vector.
+where $\pmb{\dot{\upsilon}}$ is the acceleration vector, $\mathbf{M}$ is the system inertia matrix and $\mathbf{F}$ is the total force vector.
 % The velocity transition can thus be expressed as
 % \begin{equation}
 %     \label{eq:acc}
@@ -35,7 +34,7 @@ where the added masses $X_{\dot{u}},Y_{\dot{v}},Y_{\dot{r}},N_{\dot{v}},N_{\dot{
 \begin{equation}
     \label{eq:F_expanded}
     %\input{equations/155.10_Fossen_model.F_expanded}
-\mathbf{F} = - \mathbf{C} \upsilon + \mathbf{D} =
+\mathbf{F} = - \mathbf{C} \pmb{\upsilon} + \mathbf{D} =
 \left[\begin{matrix}
 X \\
 Y \\
@@ -49,8 +48,7 @@ where $u v \left(- X_{\dot{u}} + Y_{\dot{v}}\right)$ in the yaw moment and $N$ i
 %     \label{eq:upsilon1d}
 % \mathbf{F} = - \mathbf{C} \upsilon + \mathbf{D}
 % \end{equation}
-
-For the calculation of the acceleration $\pmb{\bm{\dot{\upsilon}}}$ in \autoref{fig:reference_frames}, the mass matrix $\mathbf{M}$ and its inverse can be calculated according to \citet{fossenHandbookMarineCraft2011} as: 
+For the calculation of the acceleration $\pmb{\dot{\upsilon}}$ in \autoref{fig:reference_frames}, the mass matrix $\mathbf{M}$ and its inverse can be calculated according to \citet{fossenHandbookMarineCraft2011} as: 
 \begin{equation}
     \label{eq:M_expanded}
     \input{equations/155.10_Fossen_model.M_expanded},
