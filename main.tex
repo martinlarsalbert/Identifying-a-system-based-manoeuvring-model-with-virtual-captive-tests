@@ -22,7 +22,7 @@
 \documentclass[preprint,11pt,authoryear]{elsarticle}
 
 %% Use the option review to obtain double line spacing
-%%\documentclass[authoryear,preprint,review,12pt]{elsarticle}
+%\documentclass[authoryear,preprint,review,12pt]{elsarticle}
 
 %% Use the options 1p,twocolumn; 3p; 3p,twocolumn; 5p; or 5p,twocolumn
 %% for a journal layout:
@@ -49,6 +49,13 @@
 \usepackage{float}
 %\restylefloat{table}
 
+
+\usepackage{amsmath}
+\usepackage[a4paper, total={6in, 9in}]{geometry}
+
+%\journal{International Journal of Naval Architecture and Ocean Engineering}
+\input{extra_packages.tex}
+\begin{document}
 % ADD THE FOLLOWING COUPLE LINES INTO YOUR PREAMBLE
 \let\OLDthebibliography\thebibliography
 \renewcommand\thebibliography[1]{
@@ -58,12 +65,17 @@
 }
 
 \setlength{\bibsep}{0pt plus 0.3ex}
-\usepackage{amsmath}
-\usepackage[a4paper, total={6in, 9in}]{geometry}
-\input{extra_packages.tex}
-%\journal{International Journal of Naval Architecture and Ocean Engineering}
 
-\begin{document}
+\hypersetup{
+    colorlinks=false,
+    pdfborder={0 0 0},
+}
+\def\equationautorefname~#1\null{Eq.(#1)\null}
+\def\figureautorefname~#1\null{Fig.~#1\null}
+\def\sectionautorefname{Section}
+\def\subsectionautorefname{Subsection}
+\def\subsubsectionautorefname{~}
+\def\appendixautorefname
 
 \begin{frontmatter}
 
