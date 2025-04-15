@@ -1,37 +1,22 @@
-\noindent The forces predicted with the wPCC model equipped with the semi-empirical rudder model have been compared with the inverse dynamics forces from the zigzag10/10 and zigzag20/20 tests as well as some state VCT calculations during the tests as shown in \autoref{fig:ID_wPCC_10} and \autoref{fig:ID_wPCC_20}. 
+\noindent The forces predicted with the wPCC model equipped with the semi-empirical rudder model have been compared with the inverse dynamics forces from the zigzag10/10 and zigzag20/20 tests as well as some state VCT calculations during the tests as shown in \autoref{fig:ID_wPCC}. 
 The model describes the underlying VCT data well, with reasonably good agreement with the state VCT, especially for the yawing moment of the rudder $N_R$. However, the inverse dynamics forces from the experiments were quite different. 
-This difference cannot be explained by the model uncertainty that was assessed from the predictions with a large number of alternative realizations of the regressed parameters. The alternative realizations were created with Monte Carlo sampling from the multivariate Gaussian distribution from the regression, defined by the mean values and the covariance matrix.   
+This difference cannot be explained by either the model uncertainty (UM) or the uncertainty of the experiments (UE). The model uncertainty was assessed from the predictions with a large number of alternative realizations of the regressed parameters. The alternative realizations were created with Monte Carlo sampling from the multivariate Gaussian distribution from the regression, defined by the mean values and the covariance matrix. The uncertainty of the experiments was assessed with percentages according to \autoref{sec:experiment_uncertainty}.   
 These results indicate that there could be an inherent error in the VCT data itself, which is therefore inherited by the model. The good agreement between the rudder forces points towards an error in the hull forces, which could be connected with the missing wave generation forces in the VCT data, or the exclusion of ship roll in the model.
-%10/10
-\begin{figure}[h!]
-     \centering
-     \includesvg{figures/results_wPCC_ID.zigzag 10_10.svg}
-     \caption{Forces wPCC Zigzag10/10 to port.}
-     \label{fig:ID_wPCC_10}
-\end{figure}
-%20/20
-
-\vspace{-0.4cm}
 \begin{figure}[h]
-    \centering
-    \includesvg{figures/results_wPCC_ID.zigzag 20_20.svg}
-    \caption{Forces wPCC Zigzag20/20 to starboard.}
-    \label{fig:ID_wPCC_20}
+     \centering
+     \begin{subfigure}[b]{\textwidth}
+         \centering
+         \includesvg{figures/results_wPCC_ID.zigzag 10_10.svg}
+        \caption{Zigzag10/10 to port.}
+        \label{fig:ID_wPCC_10}
+     \end{subfigure}
+     \vfill
+     \begin{subfigure}[b]{\textwidth}
+        \centering
+        \includesvg{figures/results_wPCC_ID.zigzag 20_20.svg}
+        \caption{Zigzag20/20 to starboard.}
+        \label{fig:ID_wPCC}
+     \end{subfigure}
+        \caption{wPCC inverse dynamics forces during the zigzag tests including uncertainty of experiments (UE) compared to VCT calculations and predictions including model uncertainty (UM).}
+        \label{fig:ID_wPCC}
 \end{figure}
-%\begin{figure}[h]
-%     \centering
-%     \begin{subfigure}[b]{\textwidth}
-%         \centering
-%         \includesvg{figures/results_wPCC_ID.zigzag 10_10.svg}
-%        \caption{Forces wPCC Zigzag10/10 to port.}
-%        \label{fig:ID_wPCC_10}
-%     \end{subfigure}
-%     \vfill
-%     \begin{subfigure}[b]{\textwidth}
-%         \includesvg{figures/results_wPCC_ID.zigzag 20_20.svg}
-%        \caption{Forces wPCC Zigzag20/20 to starboard.}
-%        \label{fig:ID_wPCC_20}
-%     \end{subfigure}
-%        \caption{Comparison between forces during zigzag tests with wPCC estimated with inverse dynamics from the experiments and predictions with a model equipped with either a polynomial rudder or semi-empirical rudder model. Forces from VCT calculations of some interesting states have also been added.}
-%        \label{fig:ID_wPCC}
-%\end{figure}        
