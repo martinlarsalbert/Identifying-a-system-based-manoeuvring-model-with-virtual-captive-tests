@@ -1,7 +1,7 @@
 \noindent The mass properties of the ship models, including the added masses, need to be determined in order to conduct simulations or inverse dynamics. The rigid body mass and mass inertia were determined with swing tests in air before the FRMTs were carried out at RISE Maritime Dynamics Laboratory (MDL) in Gothenburg (Sweden). The vertical center of gravity was determined with inclining experiments with the scale models in the MDL basin.
 
 In this study, it is proposed to determine the added mass of the yaw $N_{\dot{r}}$ with the Fourier series method \citep{sakamotoURANSSimulationsStatic2012} applied to a pure yaw test carried out in a fully non-linear potential flow panel method (FNPF) in ShipFlow Motions \citep{kjellbergFullyNonlinearUnsteady2013}.
-ShipFlow Motions uses a fully nonlinear boundary element method solver for computing ship motions with better accuracy than traditional potential flow methods while being faster than the available CFD (computational fluid dynamics) methods.
+ShipFlow Motions uses a fully nonlinear boundary element method solver to calculate ship motions with better accuracy than traditional potential flow methods while being faster than the available CFD (computational fluid dynamics) methods.
 During the pure yaw test the heading $\Psi$ was varied  so that the yaw rate $r$ and yaw acceleration $\dot{r}$ were varied as:
 \begin{equation}
     \left.\begin{aligned}
@@ -40,7 +40,7 @@ in which $N_{\dot{r}}$ can be calculated from the first cosine coefficient viz.:
     N_{\dot{r}} = \frac{a_1}{\Psi_{max} w^{2}}
     \label{eq:N_r1d}
 \end{equation}
-An example of the fitted Fourier series is shown in \autoref{fig:fourier}. The sway added mass $Y_{\dot{v}}$ was determined in a similar way, but instead by conducting a pure sway test. The coupled added masses $N_{\dot{v}}$, and $Y_{\dot{r}}$ were determined with strip theory calculations using the Franks close fit method. 
+An example of the fitted Fourier series is shown in \autoref{fig:fourier}. The sway added mass $Y_{\dot{v}}$ was determined in a similar way, but instead by conducting a pure sway test. The coupled added masses $N_{\dot{v}}$, and $Y_{\dot{r}}$ were determined using strip theory calculations using the Franks close fit method. 
 \begin{figure}[h!]
     \centering   \includesvg[width = 3in]{figures/methodology_pure_yaw_no_FFT.reconstruction.svg}
     \caption{Fourier series fit to the pure yaw Motions results to determine the yaw added mass for wPCC.}
