@@ -1,6 +1,6 @@
 Another enhancement to the wPCC FRMTs, was the measurement of rudder forces for Optiwise.
-The rudder model within the Optiwise simulation model could then be replaced by the actual measured rudder forces, so that the hull prediction model could be assessed in isolation. There was generally good agreement between the predictions and the corresponding inverse dynamics forces for zigzag10/10 (\autoref{fig:ID_measured_rudder_zigzag_10_10}) and zigzag20/20 (\autoref{fig:ID_measured_rudder_zigzag_20_20}).
-However, deviations were observed for the sway force $Y_D$ during about 3 seconds after the rudder changes at t = 11--14 s and t = 35--38 s, for the zigzag10/10 and t = 11--14 s, t = 35--38 s, t = 64 s, for the zigzag20/20. The model and state VCT calculations predict a more straight line in the $Y_D$ time series around these deviation points. 
+The rudder model within the Optiwise simulation model could then be replaced by the actual measured rudder forces, so that the hull prediction model could be assessed in isolation. There was generally good agreement between the model predictions and the corresponding inverse dynamics forces for zigzag10/10  and zigzag20/20 as shown in \autoref{fig:ID_optiwise}. The model uncertainty was low, which was assessed in the same way as for the wPCC test case.
+Despite the overall good agreement, deviations were observed for the sway force $Y_D$ during about 3 seconds after rudder changes at t = 11--14 s and t = 35--38 s, for zigzag10/10 and t = 11--14 s, t = 35--38 s, t = 64 s, for zigzag20/20. The model and state VCT calculations predict a more straight line in the $Y_D$ time series around these deviation points. 
 During the work in this article, a reasonable explanation for these deviations has not been found, where filtration errors in the EKF were ruled out as a possible explanation by conducting alternative analysis with a low-pass filter instead of the EKF. Accelerations were instead calculated with numeric differentiation of low-pass filtered signals of repeated zigzag10/10 tests as shown in \autoref{fig:lowpass_deviation_points}.
 \begin{figure}[h]
     \centering
@@ -17,8 +17,8 @@ During the work in this article, a reasonable explanation for these deviations h
         \caption{Zigzag20/20 to starboard.}
         \label{fig:ID_measured_rudder_zigzag_20_20}
     \end{subfigure}
-    \caption{Inverse dynamics forces during the zigzag tests compared to predictions with the measured rudder model.}
-    \label{fig:ID_optiwise20}
+    \caption{Inverse dynamics forces during the zigzag tests compared to VCT calculations and predictions with the measured rudder model including model uncertainty.}
+    \label{fig:ID_optiwise}
 \end{figure}
 \begin{figure}[h]
     \centering
